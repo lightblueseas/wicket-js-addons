@@ -54,11 +54,7 @@ public class StringTextValue<T> implements Serializable
 	private boolean initialValue;
 
 	/**
-	 * Sets the quotation mark type.
-	 *
-	 * @param quotationMarkType
-	 *            the quotation mark type
-	 * @return the string text value
+	 * The quotation mark type.
 	 */
 	@Setter
 	@Accessors(chain = true)
