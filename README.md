@@ -1,0 +1,1 @@
+# wicket-js-addons
