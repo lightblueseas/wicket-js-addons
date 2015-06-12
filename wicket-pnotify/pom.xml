@@ -9,6 +9,22 @@
 	<packaging>jar</packaging>
 
 	<name>${project.artifactId}</name>
+	
+	<description>Note:  Contains pnotify.custom.min.js and pnotify.custom.min.css (http://sciactive.com/pnotify/) javascript library released under GPL/LGPL/MPL license.
+  pnotify.custom.min.js and pnotify.custom.min.css author Hunter Perrin
+  wicket-pnotify licensed under same terms as pnotify.custom.min.js and pnotify.custom.min.css.</description>
+	
+	<licenses>
+		<license>
+			<name>GPL/LGPL/MPL license</name>
+			<url>
+			http://www.gnu.org/licenses/old-licenses/gpl-1.0.html,
+			http://www.gnu.org/licenses/old-licenses/gpl-2.0.html,
+			https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html,
+			https://www.mozilla.org/MPL/
+			</url>
+		</license>
+	</licenses>
 
 	<dependencies>
 		<dependency>
