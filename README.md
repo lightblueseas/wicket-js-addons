@@ -7,7 +7,7 @@ It holds module-projects that are wrappers for the javascript libraries and jque
 
 The wrappers are loosely coupled and can be easily integrated into an existing Apache Wicket application.
 
-The wicket-js-addons-core module project holds the API that you all sub-modules for build the wrappers for the javascript libraries and jquery plugins. If you want to write your own wrapper you can add this project as dependency.
+The wicket-js-addons-core module project holds the API that all sub-modules for build the wrappers for the javascript libraries and jquery plugins. If you want to write your own wrapper you can add this project as dependency.
 
 
 ## Maven projects
