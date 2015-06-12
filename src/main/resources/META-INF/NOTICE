@@ -1,0 +1,4 @@
+de.alpharogroup.wicket.js.addon.popupoverlay
+  Contains jquery.popupoverlay.js (http://dev.vast.com/jquery-popup-overlay/) javascript library released under MIT license.
+  jquery.popupoverlay.js author Vast Engineering
+  wicket-popupoverlay licensed under same terms as jquery.popupoverlay.js.
