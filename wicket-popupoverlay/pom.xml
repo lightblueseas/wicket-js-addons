@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>de.alpharogroup</groupId>
 			<artifactId>wicket-js-addons-core</artifactId>
-			<version>6.18.0</version>
 		</dependency>
 	</dependencies>
 </project>

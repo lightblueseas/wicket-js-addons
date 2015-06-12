@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.alpharogroup</groupId>
@@ -43,8 +44,12 @@
 	</developers>
 
 	<modules>
-    <module>wicket-popupoverlay</module>
-    <module>wicket-js-addons-core</module>
+		<module>wicket-popupoverlay</module>
+		<module>wicket-js-addons-core</module>
+		<module>wicket-toastr</module>
+		<module>wicket-tooltipster</module>
+		<module>wicket-spin.js</module>
+		<module>wicket-pnotify</module>
 	</modules>
 
 	<properties>
@@ -52,6 +57,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- LOMBOK version -->
 		<lombok.version>1.16.4</lombok.version>
+		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
 		<!-- WICKET version -->
 		<wicket.version>${project.version}</wicket.version>
 		<!-- WICKET EXTENSION LIBRARIES versions -->
@@ -151,6 +157,11 @@
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
 				<version>${lombok.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>wicket-js-addons-core</artifactId>
+				<version>${wicket-js-addons-core.version}</version>
 			</dependency>
 			<!-- WICKET DEPENDENCIES -->
 			<dependency>
