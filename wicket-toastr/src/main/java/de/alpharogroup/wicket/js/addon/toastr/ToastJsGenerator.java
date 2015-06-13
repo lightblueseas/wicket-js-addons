@@ -19,6 +19,8 @@ import java.io.Serializable;
 import java.util.Map;
 import java.util.Set;
 
+import lombok.Getter;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.wicket.util.lang.Args;
 
@@ -40,6 +42,8 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 	 * The constant for the key of the command.
 	 */
 	public static final String COMMAND = "command";
+	@Getter
+	private boolean documentReadyFunction;
 
 	/**
 	 * Instantiates a new {@link ToastJsGenerator}.
@@ -57,7 +61,19 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 	 */
 	public ToastJsGenerator(ToastrSettings settings)
 	{
+		this(settings, true);
+	}
+
+	/**
+	 * Instantiates a new {@link ToastJsGenerator} with the given {@link ToastrSettings}.
+	 *
+	 * @param settings
+	 *            the settings for the toastr plugin.
+	 */
+	public ToastJsGenerator(ToastrSettings settings, boolean withDocumentReadyFunction)
+	{
 		super(Args.notNull(settings, "settings"));
+		this.documentReadyFunction = withDocumentReadyFunction;
 	}
 
 	/**
@@ -85,7 +101,9 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 		String methodName)
 	{
 		StringBuilder sb = new StringBuilder();
-		sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n").append("\n");
+		if(isDocumentReadyFunction()) {
+			sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n").append("\n");			
+		}
 		for (Map.Entry<String, Object> entry : variables.entrySet())
 		{
 			String key = entry.getKey();
@@ -98,7 +116,9 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 		sb.append("\n");
 		sb.append("${" + COMMAND + "};");
 		sb.append("\n");
-		sb.append(DOCUMENT_READY_FUNCTION_SUFFIX);
+		if(isDocumentReadyFunction()) {
+			sb.append(DOCUMENT_READY_FUNCTION_SUFFIX);			
+		}
 		return sb.toString();
 	}
 

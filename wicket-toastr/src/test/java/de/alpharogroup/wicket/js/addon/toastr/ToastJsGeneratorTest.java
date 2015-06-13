@@ -34,5 +34,10 @@ public class ToastJsGeneratorTest
 
 		String result = generator.generateJs(settings, "bla");
 		System.out.println(result);
+		System.out.println("==============================");
+		generator = new ToastJsGenerator(settings, false);
+		result = generator.generateJs(settings, "bla");
+		System.out.println(result);
+		
 	}
 }
