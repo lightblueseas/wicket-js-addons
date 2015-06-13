@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.alpharogroup.wicket.js.addon.toastr;
+package de.alpharogroup.wicket.js.addon.enums;
 
 import lombok.Getter;
 import de.alpharogroup.wicket.js.addon.core.ValueEnum;

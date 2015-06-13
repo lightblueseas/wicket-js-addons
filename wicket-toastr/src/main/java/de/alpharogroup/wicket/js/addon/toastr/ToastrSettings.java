@@ -27,6 +27,7 @@ import lombok.ToString;
 import de.alpharogroup.wicket.js.addon.core.Settings;
 import de.alpharogroup.wicket.js.addon.core.StringTextType;
 import de.alpharogroup.wicket.js.addon.core.StringTextValue;
+import de.alpharogroup.wicket.js.addon.enums.Easing;
 
 /**
  * This class encapsulates various settings for the toastr jquery plugin. See the documentation for
