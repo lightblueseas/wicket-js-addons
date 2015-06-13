@@ -20,5 +20,13 @@ public class PopupoverlayJsGeneratorTest
 		String result = generator.generateJs();
 
 		System.out.println(result);
+		System.out.println("=======================");
+		
+		generator = new PopupoverlayJsGenerator(popupoverlaySettings,
+			"aComponent", false);
+		generator.setComponentId("aComponent");
+		result = generator.generateJs();
+
+		System.out.println(result);
 	}
 }

@@ -80,23 +80,7 @@ public class PnotifyJsGenerator extends JavascriptGenerator<PnotifySettings>
 		sb.append("(");
 		if (0 < variables.size())
 		{
-			sb.append("{\n");
-			int count = 1;
-			for (Map.Entry<String, Object> entry : variables.entrySet())
-			{
-				String key = entry.getKey();
-				sb.append(key + ": ${" + key + "}");
-				if (count < variables.size())
-				{
-					sb.append(",\n");
-				}
-				else
-				{
-					sb.append("\n");
-				}
-				count++;
-			}
-			sb.append("}");
+			generateJsOptionsForTemplateContent(variables, sb);
 		}
 		sb.append(");");
 		return sb.toString();

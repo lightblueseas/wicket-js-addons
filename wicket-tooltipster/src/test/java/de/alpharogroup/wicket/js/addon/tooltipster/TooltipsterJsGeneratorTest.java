@@ -34,5 +34,10 @@ public class TooltipsterJsGeneratorTest
 		TooltipsterJsGenerator generator = new TooltipsterJsGenerator(tooltipsterSettings, "foo");
 		String result = generator.generateJs();
 		System.out.println(result);
+		System.out.println("=======================");
+		
+		generator = new TooltipsterJsGenerator(tooltipsterSettings, "foo", false);
+		result = generator.generateJs();
+		System.out.println(result);
 	}
 }

@@ -59,7 +59,7 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 	/** The component id. */
 	private String componentId;
 
-	/** The with component id. */
+	/** The with component id flag. */
 	private boolean withComponentId;
 
 	/** The method name. */
@@ -67,6 +67,9 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 
 	/** The settings. */
 	private S settings;
+
+	/** The with document ready function flag. */
+	private boolean withDocumentReadyFunction;
 
 	/**
 	 * Instantiates a new javascript generator.
@@ -79,6 +82,11 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 		this.settings = Args.notNull(settings, "settings");
 	}
 
+	/**
+	 * Generate js.
+	 *
+	 * @return the string
+	 */
 	public String generateJs()
 	{
 		return generateJs(getSettings(), getMethodName());
@@ -135,33 +143,72 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 		String methodName)
 	{
 		StringBuilder sb = new StringBuilder();
-		sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n").append("$('#${")
-			.append(COMPONENT_ID).append("}')").append(".").append(methodName).append("(");
-		if (1 < variables.size())
-		{
-			sb.append("{\n");
-			int count = 1;
-			Object localComponentId = variables.get(COMPONENT_ID);
-			variables.remove(COMPONENT_ID);
-			for (Map.Entry<String, Object> entry : variables.entrySet())
-			{
-				String key = entry.getKey();
-				sb.append(key).append(": ${").append(key).append("}");
-				if (count < variables.size())
-				{
-					sb.append(",\n");
-				}
-				else
-				{
-					sb.append("\n");
-				}
-				count++;
-			}
-			variables.put(COMPONENT_ID, localComponentId);
-			sb.append("}");
+
+		if(isWithDocumentReadyFunction()) {
+			sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n");			
 		}
-		sb.append(");").append("\n").append(DOCUMENT_READY_FUNCTION_SUFFIX);
+		if(isWithComponentId()) {
+			sb.append("$('#${")
+			.append(COMPONENT_ID).append("}')").append(".");
+		} else {
+			sb.append("$.");
+		}
+		sb.append(methodName).append("(");
+		if(isWithComponentId()) {
+			if (1 < variables.size())
+			{
+				generateJsOptionsForTemplateContent(variables, sb);
+			}			
+		} else {
+			if (0 < variables.size())
+			{
+				generateJsOptionsForTemplateContent(variables, sb);
+			}
+		}
+		sb.append(");").append("\n");
+		if(isWithDocumentReadyFunction()) {
+			sb.append(DOCUMENT_READY_FUNCTION_SUFFIX);			
+		}
 		return sb.toString();
+	}
+
+	/**
+	 * Generate the javascript options for template content.
+	 *
+	 * @param variables 
+	 *            the map with the javascript options.
+	 * @param sb the {@link StringBuilder} to add the javascript options. 
+	 */
+	protected void generateJsOptionsForTemplateContent(final Map<String, Object> variables,
+		StringBuilder sb)
+	{
+		sb.append("{\n");
+		int count = 1;
+		Object localComponentId = null;
+		if (withComponentId)
+		{
+			localComponentId = variables.get(COMPONENT_ID);
+			variables.remove(COMPONENT_ID);
+		}
+		for (Map.Entry<String, Object> entry : variables.entrySet())
+		{
+			String key = entry.getKey();
+			sb.append(key).append(": ${").append(key).append("}");
+			if (count < variables.size())
+			{
+				sb.append(",\n");
+			}
+			else
+			{
+				sb.append("\n");
+			}
+			count++;
+		}
+		if (withComponentId)
+		{
+			variables.put(COMPONENT_ID, localComponentId);
+		}
+		sb.append("}");
 	}
 
 	/**

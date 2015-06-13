@@ -50,6 +50,7 @@
 		<module>wicket-tooltipster</module>
 		<module>wicket-spin.js</module>
 		<module>wicket-pnotify</module>
+		<module>wicket-session-timeout</module>
 	</modules>
 
 	<properties>

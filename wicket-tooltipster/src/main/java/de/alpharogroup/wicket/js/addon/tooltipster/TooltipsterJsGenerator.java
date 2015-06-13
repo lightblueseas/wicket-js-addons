@@ -64,10 +64,25 @@ public class TooltipsterJsGenerator extends JavascriptGenerator<TooltipsterSetti
 	 */
 	public TooltipsterJsGenerator(final TooltipsterSettings settings, final String componentId)
 	{
+		this(settings, componentId, true);
+	}
+
+	/**
+	 * Instantiates a new {@link TooltipsterJsGenerator} with the given {@link TooltipsterSettings}.
+	 *
+	 * @param settings
+	 *            the settings for the tooltipster plugin.
+	 *
+	 * @param componentId
+	 *            the component id
+	 */
+	public TooltipsterJsGenerator(final TooltipsterSettings settings, final String componentId, boolean withDocumentReadyFunction)
+	{
 		super(settings);
 		setComponentId(Args.notEmpty(componentId, "componentId"));
 		setWithComponentId(true);
 		setMethodName("tooltipster");
+		setWithDocumentReadyFunction(withDocumentReadyFunction);
 	}
 
 }

@@ -54,10 +54,26 @@ public class PopupoverlayJsGenerator extends JavascriptGenerator<PopupoverlaySet
 	 */
 	public PopupoverlayJsGenerator(PopupoverlaySettings settings, final String componentId)
 	{
+		this(settings, componentId, true);
+	}
+
+	/**
+	 * Instantiates a new {@link PopupoverlayJsGenerator} with the given
+	 * {@link PopupoverlaySettings}.
+	 *
+	 * @param settings
+	 *            the settings for the jquery-popup-overlay plugin.
+	 *
+	 * @param componentId
+	 *            the component id
+	 */
+	public PopupoverlayJsGenerator(PopupoverlaySettings settings, final String componentId, boolean withDocumentReadyFunction)
+	{
 		super(settings);
 		setComponentId(Args.notEmpty(componentId, "componentId"));
 		setWithComponentId(true);
 		setMethodName("popup");
+		setWithDocumentReadyFunction(withDocumentReadyFunction);
 	}
 
 }

@@ -102,26 +102,8 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 		if (1 < variables.size())
 		{
 			sb.append("var opts = ");
-			sb.append("{\n");
-			int count = 1;
-			Object localComponentId = variables.get(COMPONENT_ID);
-			variables.remove(COMPONENT_ID);
-			for (Map.Entry<String, Object> entry : variables.entrySet())
-			{
-				String key = entry.getKey();
-				sb.append(key).append(": ${").append(key).append("}");
-				if (count < variables.size())
-				{
-					sb.append(",\n");
-				}
-				else
-				{
-					sb.append("\n");
-				}
-				count++;
-			}
-			variables.put(COMPONENT_ID, localComponentId);
-			sb.append("};");
+			generateJsOptionsForTemplateContent(variables, sb);
+			sb.append(";");
 			sb.append("\n");
 		}
 		if (!getComponentId().isEmpty())
