@@ -60,14 +60,14 @@
 		<lombok.version>1.16.4</lombok.version>
 		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
 		<!-- WICKET version -->
-		<wicket.version>${project.version}</wicket.version>
+		<wicket.version>[6.0.0,6.99)</wicket.version>
 		<!-- WICKET EXTENSION LIBRARIES versions -->
-		<wicketstuff.version>${project.version}</wicketstuff.version>
+		<wicketstuff.version>[6.0.0,6.99)</wicketstuff.version>
 		<wiquery-core.version>6.13.0</wiquery-core.version>
 		<wicket-modelfactory.version>0.9.8</wicket-modelfactory.version>
 		<wicket-source.version>6.0.0.8</wicket-source.version>
 		<!-- JETTY 9 version -->
-		<jetty9.version>9.2.10.v20150310</jetty9.version>
+		<jetty9.version>9.3.0.v20150612</jetty9.version>
 		<wicket-jetty9-runner.version>1.0.1</wicket-jetty9-runner.version>
 		<!-- TOMCAT version -->
 		<tomcat.version>7.0.57</tomcat.version>
