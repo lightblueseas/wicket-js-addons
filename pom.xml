@@ -1018,6 +1018,11 @@
 					</plugin>
 
 					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+					</plugin>
+
+					<plugin>
 						<inherited>true</inherited>
 						<artifactId>maven-gpg-plugin</artifactId>
 					</plugin>
