@@ -10,6 +10,15 @@
 
 	<name>${project.artifactId}</name>
 
+	<licenses>
+		<license>
+			<name>MIT license</name>
+			<url>
+				http://www.opensource.org/licenses/mit-license.php
+			</url>
+		</license>
+	</licenses>
+
 	<dependencies>
 		<dependency>
 			<groupId>de.alpharogroup</groupId>
