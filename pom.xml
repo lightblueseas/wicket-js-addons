@@ -51,6 +51,7 @@
 		<module>wicket-spin.js</module>
 		<module>wicket-pnotify</module>
 		<module>wicket-session-timeout</module>
+		<module>wicket-collapsible</module>
 	</modules>
 
 	<properties>
