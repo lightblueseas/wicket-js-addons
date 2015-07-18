@@ -28,3 +28,9 @@ de.alpharogroup.wicket.js.addon.tooltipster
                                                 maintainers: Caleb Jacob(http://calebjacob.com), Louis Ameline(https://github.com/louisameline)
   wicket-tooltipster licensed under same terms as jquery.tooltipster.min.js and tooltipster.css.
   
+  
+de.alpharogroup.wicket.js.addon.sessiontimeout
+  Contains bootstrap-session-timeout.min.js (http://www.orangehilldev.com/) javascript library released under MIT license - http://www.opensource.org/licenses/mit-license.php
+  spin.min.js author Vedran Opacic
+  wicket-session-timeout licensed under same terms as bootstrap-session-timeout.min.js.
+  
