@@ -44,7 +44,7 @@ public enum ToastrType implements ValueEnum
 	 * @param type
 	 *            the value of the type.
 	 */
-	private ToastrType(String type)
+	private ToastrType(final String type)
 	{
 		this.value = type;
 	}

@@ -49,17 +49,6 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 	/**
 	 * Instantiates a new {@link SpinSettings}.
 	 *
-	 * @param componentId
-	 *            the component id
-	 */
-	public SpinJsGenerator(final String componentId)
-	{
-		this(SpinSettings.builder().build(), componentId);
-	}
-
-	/**
-	 * Instantiates a new {@link SpinSettings}.
-	 *
 	 * @param settings
 	 *            the settings for the spin library.
 	 */
@@ -83,6 +72,17 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 		setWithComponentId(true);
 	}
 
+	/**
+	 * Instantiates a new {@link SpinSettings}.
+	 *
+	 * @param componentId
+	 *            the component id
+	 */
+	public SpinJsGenerator(final String componentId)
+	{
+		this(SpinSettings.builder().build(), componentId);
+	}
+
 
 	/**
 	 * Generates the javascript template code from the given map and the given method name that will
@@ -94,11 +94,12 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 	 *            The method name.
 	 * @return The generated javascript from the given map and the given method name.
 	 */
+	@Override
 	public String generateJavascriptTemplateContent(final Map<String, Object> variables,
-		String methodName)
+		final String methodName)
 	{
 
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		if (1 < variables.size())
 		{
 			sb.append("var opts = ");

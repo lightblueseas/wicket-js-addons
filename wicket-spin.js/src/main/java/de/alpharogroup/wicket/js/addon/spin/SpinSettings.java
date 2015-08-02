@@ -168,7 +168,7 @@ public class SpinSettings implements Settings
 	@Override
 	public Set<StringTextValue<?>> asSet()
 	{
-		Set<StringTextValue<?>> allSettings = new HashSet<>();
+		final Set<StringTextValue<?>> allSettings = new HashSet<>();
 		allSettings.add(getLines());
 		allSettings.add(getLength());
 		allSettings.add(getWidth());

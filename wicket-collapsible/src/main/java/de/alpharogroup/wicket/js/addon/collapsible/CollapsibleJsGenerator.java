@@ -11,7 +11,42 @@ public class CollapsibleJsGenerator extends JavascriptGenerator<CollapsibleSetti
 	 * The serialVersionUID.
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
+
+	/**
+	 * Instantiates a new {@link CollapsibleJsGenerator} with the given {@link PopupoverlaySettings}
+	 * .
+	 *
+	 * @param settings
+	 *            the settings for the jquery-popup-overlay plugin.
+	 *
+	 * @param componentId
+	 *            the component id
+	 */
+	public CollapsibleJsGenerator(final CollapsibleSettings settings, final String componentId)
+	{
+		this(settings, componentId, false);
+	}
+
+	/**
+	 * Instantiates a new {@link CollapsibleJsGenerator} with the given {@link PopupoverlaySettings}
+	 * .
+	 *
+	 * @param settings
+	 *            the settings for the jquery-popup-overlay plugin.
+	 *
+	 * @param componentId
+	 *            the component id
+	 */
+	public CollapsibleJsGenerator(final CollapsibleSettings settings, final String componentId,
+		final boolean withDocumentReadyFunction)
+	{
+		super(settings);
+		setComponentId(Args.notEmpty(componentId, "componentId"));
+		setWithComponentId(true);
+		setMethodName("collapsible");
+		setWithDocumentReadyFunction(withDocumentReadyFunction);
+	}
 
 	/**
 	 * Instantiates a new {@link CollapsibleJsGenerator}.
@@ -22,40 +57,6 @@ public class CollapsibleJsGenerator extends JavascriptGenerator<CollapsibleSetti
 	public CollapsibleJsGenerator(final String componentId)
 	{
 		this(CollapsibleSettings.builder().build(), componentId);
-	}
-
-	/**
-	 * Instantiates a new {@link CollapsibleJsGenerator} with the given
-	 * {@link PopupoverlaySettings}.
-	 *
-	 * @param settings
-	 *            the settings for the jquery-popup-overlay plugin.
-	 *
-	 * @param componentId
-	 *            the component id
-	 */
-	public CollapsibleJsGenerator(CollapsibleSettings settings, final String componentId)
-	{
-		this(settings, componentId, false);
-	}
-
-	/**
-	 * Instantiates a new {@link CollapsibleJsGenerator} with the given
-	 * {@link PopupoverlaySettings}.
-	 *
-	 * @param settings
-	 *            the settings for the jquery-popup-overlay plugin.
-	 *
-	 * @param componentId
-	 *            the component id
-	 */
-	public CollapsibleJsGenerator(CollapsibleSettings settings, final String componentId, boolean withDocumentReadyFunction)
-	{
-		super(settings);
-		setComponentId(Args.notEmpty(componentId, "componentId"));
-		setWithComponentId(true);
-		setMethodName("collapsible");
-		setWithDocumentReadyFunction(withDocumentReadyFunction);
 	}
 
 

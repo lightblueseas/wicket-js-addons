@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.popupoverlay;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -32,17 +33,6 @@ public class PopupoverlayJsGenerator extends JavascriptGenerator<PopupoverlaySet
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Instantiates a new {@link PopupoverlayJsGenerator}.
-	 *
-	 * @param componentId
-	 *            the component id
-	 */
-	public PopupoverlayJsGenerator(final String componentId)
-	{
-		this(PopupoverlaySettings.builder().build(), componentId);
-	}
-
-	/**
 	 * Instantiates a new {@link PopupoverlayJsGenerator} with the given
 	 * {@link PopupoverlaySettings}.
 	 *
@@ -52,7 +42,7 @@ public class PopupoverlayJsGenerator extends JavascriptGenerator<PopupoverlaySet
 	 * @param componentId
 	 *            the component id
 	 */
-	public PopupoverlayJsGenerator(PopupoverlaySettings settings, final String componentId)
+	public PopupoverlayJsGenerator(final PopupoverlaySettings settings, final String componentId)
 	{
 		this(settings, componentId, true);
 	}
@@ -67,13 +57,25 @@ public class PopupoverlayJsGenerator extends JavascriptGenerator<PopupoverlaySet
 	 * @param componentId
 	 *            the component id
 	 */
-	public PopupoverlayJsGenerator(PopupoverlaySettings settings, final String componentId, boolean withDocumentReadyFunction)
+	public PopupoverlayJsGenerator(final PopupoverlaySettings settings, final String componentId,
+		final boolean withDocumentReadyFunction)
 	{
 		super(settings);
 		setComponentId(Args.notEmpty(componentId, "componentId"));
 		setWithComponentId(true);
 		setMethodName("popup");
 		setWithDocumentReadyFunction(withDocumentReadyFunction);
+	}
+
+	/**
+	 * Instantiates a new {@link PopupoverlayJsGenerator}.
+	 *
+	 * @param componentId
+	 *            the component id
+	 */
+	public PopupoverlayJsGenerator(final String componentId)
+	{
+		this(PopupoverlaySettings.builder().build(), componentId);
 	}
 
 }

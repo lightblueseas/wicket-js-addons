@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.popupoverlay;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -49,7 +50,7 @@ public enum VerticalPosition implements ValueEnum
 	 * @param position
 	 *            the value of the position.
 	 */
-	private VerticalPosition(String position)
+	private VerticalPosition(final String position)
 	{
 		this.value = position;
 	}

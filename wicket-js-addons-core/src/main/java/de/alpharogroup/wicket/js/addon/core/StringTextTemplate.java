@@ -80,11 +80,11 @@ public class StringTextTemplate extends TextTemplate
 				buffer.append(Streams.readString(stream.getInputStream()));
 			}
 		}
-		catch (IOException e)
+		catch (final IOException e)
 		{
 			throw new RuntimeException(e);
 		}
-		catch (ResourceStreamNotFoundException e)
+		catch (final ResourceStreamNotFoundException e)
 		{
 			throw new RuntimeException(e);
 		}
@@ -94,7 +94,7 @@ public class StringTextTemplate extends TextTemplate
 			{
 				stream.close();
 			}
-			catch (IOException e)
+			catch (final IOException e)
 			{
 				LOGGER.error("" + e.getMessage(), e);
 			}
@@ -118,7 +118,8 @@ public class StringTextTemplate extends TextTemplate
 	{
 		if (variables != null)
 		{
-			String result = new MapVariableInterpolator(buffer.toString(), variables).toString();
+			final String result = new MapVariableInterpolator(buffer.toString(), variables)
+				.toString();
 			buffer.delete(0, buffer.length());
 			buffer.append(result);
 		}

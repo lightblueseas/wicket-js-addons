@@ -203,7 +203,7 @@ public class PnotifySettings implements Settings
 	@Override
 	public Set<StringTextValue<?>> asSet()
 	{
-		Set<StringTextValue<?>> allSettings = new HashSet<>();
+		final Set<StringTextValue<?>> allSettings = new HashSet<>();
 		allSettings.add(getAddclass());
 		allSettings.add(getAnimation());
 		allSettings.add(getAnimation_speed());

@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.toastr;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -26,7 +27,7 @@ public class ToastJsGeneratorTest
 	@Test
 	public void testGenerator()
 	{
-		ToastrSettings settings = ToastrSettings.builder().build();
+		final ToastrSettings settings = ToastrSettings.builder().build();
 		settings.getPositionClass().setValue(Position.TOP_RIGHT);
 		settings.getNotificationContent().setValue("This is a notification");
 		settings.getNotificationTitle().setValue("This is the title");
@@ -38,6 +39,6 @@ public class ToastJsGeneratorTest
 		generator = new ToastJsGenerator(settings, false);
 		result = generator.generateJs(settings, "bla");
 		System.out.println(result);
-		
+
 	}
 }

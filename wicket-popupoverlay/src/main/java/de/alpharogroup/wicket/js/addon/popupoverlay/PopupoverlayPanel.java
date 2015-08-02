@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.popupoverlay;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -60,29 +61,9 @@ public abstract class PopupoverlayPanel<T> extends GenericPanel<T>
 	 * @param model
 	 *            the model
 	 */
-	public PopupoverlayPanel(String id, IModel<T> model)
+	public PopupoverlayPanel(final String id, final IModel<T> model)
 	{
 		super(id, model);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public void onBeforeRender()
-	{
-
-
-		addOrReplace(overlayReference = newOverlayReference("overlayReference", getModel()));
-		overlayReference.add(newPopupoverlayBehavior());
-		overlayReference.setOutputMarkupId(true);
-
-		addOrReplace(openButton = newOpenButton("openButton"));
-		// add class attributte with the markup id from the overlay with the
-		// suffix '_open' that indicates that the overlay shell open...
-		openButton.add(new AttributeAppender("class", " " + overlayReference.getMarkupId()
-			+ OPEN_OVERLAY_SUFFIX));
-		super.onBeforeRender();
 	}
 
 	/**
@@ -94,7 +75,7 @@ public abstract class PopupoverlayPanel<T> extends GenericPanel<T>
 	 *            the wicket id
 	 * @return the Button
 	 */
-	protected Button newOpenButton(String id)
+	protected Button newOpenButton(final String id)
 	{
 		return new Button(id);
 	}
@@ -124,20 +105,7 @@ public abstract class PopupoverlayPanel<T> extends GenericPanel<T>
 	 *            the model
 	 * @return the markup container
 	 */
-	protected abstract MarkupContainer newOverlayReference(String id, IModel<T> model);
-
-	/**
-	 * Factory method for create the {@link PopupoverlaySettings}. This method is invoked in the
-	 * method {@link #newPopupoverlayBehavior()} from the derived classes and can be overridden so
-	 * users can provide their own version of the {@link PopupoverlaySettings}.
-	 *
-	 * @return the {@link PopupoverlaySettings}.
-	 */
-	protected PopupoverlaySettings newPopupoverlaySettings()
-	{
-		PopupoverlaySettings settings = PopupoverlaySettings.builder().build();
-		return settings;
-	}
+	protected abstract MarkupContainer newOverlayReference(final String id, final IModel<T> model);
 
 	/**
 	 * Factory method for create the {@link PopupoverlayBehavior}. This method is invoked in the
@@ -149,6 +117,39 @@ public abstract class PopupoverlayPanel<T> extends GenericPanel<T>
 	protected PopupoverlayBehavior newPopupoverlayBehavior()
 	{
 		return new PopupoverlayBehavior(newPopupoverlaySettings());
+	}
+
+	/**
+	 * Factory method for create the {@link PopupoverlaySettings}. This method is invoked in the
+	 * method {@link #newPopupoverlayBehavior()} from the derived classes and can be overridden so
+	 * users can provide their own version of the {@link PopupoverlaySettings}.
+	 *
+	 * @return the {@link PopupoverlaySettings}.
+	 */
+	protected PopupoverlaySettings newPopupoverlaySettings()
+	{
+		final PopupoverlaySettings settings = PopupoverlaySettings.builder().build();
+		return settings;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void onBeforeRender()
+	{
+
+
+		addOrReplace(overlayReference = newOverlayReference("overlayReference", getModel()));
+		overlayReference.add(newPopupoverlayBehavior());
+		overlayReference.setOutputMarkupId(true);
+
+		addOrReplace(openButton = newOpenButton("openButton"));
+		// add class attributte with the markup id from the overlay with the
+		// suffix '_open' that indicates that the overlay shell open...
+		openButton.add(new AttributeAppender("class", " " + overlayReference.getMarkupId()
+			+ OPEN_OVERLAY_SUFFIX));
+		super.onBeforeRender();
 	}
 
 }

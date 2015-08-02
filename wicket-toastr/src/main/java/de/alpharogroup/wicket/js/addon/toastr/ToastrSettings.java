@@ -165,7 +165,7 @@ public class ToastrSettings implements Settings
 	@Override
 	public Set<StringTextValue<?>> asSet()
 	{
-		Set<StringTextValue<?>> allSettings = new HashSet<>();
+		final Set<StringTextValue<?>> allSettings = new HashSet<>();
 		allSettings.add(getCloseButton());
 		allSettings.add(getDebug());
 		allSettings.add(getExtendedTimeOut());

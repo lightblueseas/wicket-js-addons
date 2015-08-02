@@ -27,7 +27,7 @@ public class TooltipsterJsGeneratorTest
 	@Test
 	public void testGenerator()
 	{
-		TooltipsterSettings tooltipsterSettings = TooltipsterSettings.builder().build();
+		final TooltipsterSettings tooltipsterSettings = TooltipsterSettings.builder().build();
 		tooltipsterSettings.getAnimation().setValue("grow");
 		tooltipsterSettings.getArrow().setValue(false);
 		tooltipsterSettings.getContent().setValue("Loading...");
@@ -35,7 +35,7 @@ public class TooltipsterJsGeneratorTest
 		String result = generator.generateJs();
 		System.out.println(result);
 		System.out.println("=======================");
-		
+
 		generator = new TooltipsterJsGenerator(tooltipsterSettings, "foo", false);
 		result = generator.generateJs();
 		System.out.println(result);

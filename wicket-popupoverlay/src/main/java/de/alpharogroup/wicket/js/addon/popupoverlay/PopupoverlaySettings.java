@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.popupoverlay;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -275,7 +276,7 @@ public class PopupoverlaySettings implements Settings
 	@Override
 	public Set<StringTextValue<?>> asSet()
 	{
-		Set<StringTextValue<?>> allSettings = new HashSet<>();
+		final Set<StringTextValue<?>> allSettings = new HashSet<>();
 		allSettings.add(getAutoopen());
 		allSettings.add(getAutozindex());
 		allSettings.add(getBackground());

@@ -8,12 +8,12 @@ public class SessionTimeoutJsGeneratorTest
 	@Test
 	public void testGenerator()
 	{
-		SessionTimeoutSettings settings = SessionTimeoutSettings.builder().build();
+		final SessionTimeoutSettings settings = SessionTimeoutSettings.builder().build();
 		settings.getTitle().setValue("abla session is abe to out;-)");
 		settings.getMessage().setValue("!!! session timeout !!!");
-		SessionTimeoutJsGenerator generator = new SessionTimeoutJsGenerator(settings);
-		
-		String result = generator.generateJs();
+		final SessionTimeoutJsGenerator generator = new SessionTimeoutJsGenerator(settings);
+
+		final String result = generator.generateJs();
 		System.out.println(result);
 	}
 

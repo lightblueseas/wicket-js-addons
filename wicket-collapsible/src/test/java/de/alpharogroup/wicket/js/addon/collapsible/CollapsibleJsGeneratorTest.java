@@ -8,11 +8,11 @@ public class CollapsibleJsGeneratorTest
 	@Test
 	public void testCollapsibleJsGenerator()
 	{
-		CollapsibleSettings settings = CollapsibleSettings.builder().build();
+		final CollapsibleSettings settings = CollapsibleSettings.builder().build();
 		settings.getAccordionDownSpeed().setValue(300);
-		
-		CollapsibleJsGenerator generator = new CollapsibleJsGenerator(settings, "foo");
-		String result = generator.generateJs();
+
+		final CollapsibleJsGenerator generator = new CollapsibleJsGenerator(settings, "foo");
+		final String result = generator.generateJs();
 		System.out.println(result);
 	}
 

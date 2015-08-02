@@ -75,7 +75,7 @@ public class StringTextValue<T> implements Serializable
 	 * @param stringTextType
 	 *            the string text type
 	 */
-	public StringTextValue(final String name, StringTextType stringTextType)
+	public StringTextValue(final String name, final StringTextType stringTextType)
 	{
 		this(name, null, stringTextType, true);
 	}
@@ -90,7 +90,7 @@ public class StringTextValue<T> implements Serializable
 	 * @param stringTextType
 	 *            the string text type
 	 */
-	public StringTextValue(final String name, final T value, StringTextType stringTextType)
+	public StringTextValue(final String name, final T value, final StringTextType stringTextType)
 	{
 		this(name, value, stringTextType, true);
 	}
@@ -110,8 +110,8 @@ public class StringTextValue<T> implements Serializable
 	 *            added.
 	 */
 	@SuppressWarnings("unchecked")
-	public StringTextValue(final String name, final T value, StringTextType stringTextType,
-		boolean initialValue)
+	public StringTextValue(final String name, final T value, final StringTextType stringTextType,
+		final boolean initialValue)
 	{
 		Args.notNull(stringTextType, "type");
 		this.value = value;
@@ -152,7 +152,7 @@ public class StringTextValue<T> implements Serializable
 	 *            generation of javascript, if false this {@link StringTextValue} will be not added.
 	 * @return the string text value
 	 */
-	public StringTextValue<T> setValue(final T value, boolean initialValue)
+	public StringTextValue<T> setValue(final T value, final boolean initialValue)
 	{
 		this.initialValue = initialValue;
 		this.value = value;

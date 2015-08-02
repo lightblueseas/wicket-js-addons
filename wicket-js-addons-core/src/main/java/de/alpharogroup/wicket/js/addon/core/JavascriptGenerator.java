@@ -77,9 +77,59 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 	 * @param settings
 	 *            the settings
 	 */
-	public JavascriptGenerator(S settings)
+	public JavascriptGenerator(final S settings)
 	{
 		this.settings = Args.notNull(settings, "settings");
+	}
+
+	/**
+	 * Generates the javascript template code from the given map and the given method name that will
+	 * be used to interpolate with the values of the given map.
+	 *
+	 * @param variables
+	 *            the map with the javascript options.
+	 * @param methodName
+	 *            The method name.
+	 * @return The generated javascript from the given map and the given method name.
+	 */
+	protected String generateJavascriptTemplateContent(final Map<String, Object> variables,
+		final String methodName)
+	{
+		final StringBuilder sb = new StringBuilder();
+
+		if (isWithDocumentReadyFunction())
+		{
+			sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n");
+		}
+		if (isWithComponentId())
+		{
+			sb.append("$('#${").append(COMPONENT_ID).append("}')").append(".");
+		}
+		else
+		{
+			sb.append("$.");
+		}
+		sb.append(methodName).append("(");
+		if (isWithComponentId())
+		{
+			if (1 < variables.size())
+			{
+				generateJsOptionsForTemplateContent(variables, sb);
+			}
+		}
+		else
+		{
+			if (0 < variables.size())
+			{
+				generateJsOptionsForTemplateContent(variables, sb);
+			}
+		}
+		sb.append(");").append("\n");
+		if (isWithDocumentReadyFunction())
+		{
+			sb.append(DOCUMENT_READY_FUNCTION_SUFFIX);
+		}
+		return sb.toString();
 	}
 
 	/**
@@ -106,9 +156,10 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 		// 1. Create an empty map...
 		final Map<String, Object> variables = initializeVariables(settings.asSet());
 		// 4. Generate the js template with the map and the method name...
-		String stringTemplateContent = generateJavascriptTemplateContent(variables, methodName);
+		final String stringTemplateContent = generateJavascriptTemplateContent(variables,
+			methodName);
 		// 5. Create the StringTextTemplate with the generated template...
-		StringTextTemplate stringTextTemplate = new StringTextTemplate(stringTemplateContent);
+		final StringTextTemplate stringTextTemplate = new StringTextTemplate(stringTemplateContent);
 		// 6. Interpolate the template with the values of the map...
 		stringTextTemplate.interpolate(variables);
 		try
@@ -122,7 +173,7 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 			{
 				stringTextTemplate.close();
 			}
-			catch (IOException e)
+			catch (final IOException e)
 			{
 				LOGGER.error(e.getMessage(), e);
 			}
@@ -130,57 +181,15 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 	}
 
 	/**
-	 * Generates the javascript template code from the given map and the given method name that will
-	 * be used to interpolate with the values of the given map.
+	 * Generate the javascript options for template content.
 	 *
 	 * @param variables
 	 *            the map with the javascript options.
-	 * @param methodName
-	 *            The method name.
-	 * @return The generated javascript from the given map and the given method name.
-	 */
-	protected String generateJavascriptTemplateContent(final Map<String, Object> variables,
-		String methodName)
-	{
-		StringBuilder sb = new StringBuilder();
-
-		if(isWithDocumentReadyFunction()) {
-			sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n");			
-		}
-		if(isWithComponentId()) {
-			sb.append("$('#${")
-			.append(COMPONENT_ID).append("}')").append(".");
-		} else {
-			sb.append("$.");
-		}
-		sb.append(methodName).append("(");
-		if(isWithComponentId()) {
-			if (1 < variables.size())
-			{
-				generateJsOptionsForTemplateContent(variables, sb);
-			}			
-		} else {
-			if (0 < variables.size())
-			{
-				generateJsOptionsForTemplateContent(variables, sb);
-			}
-		}
-		sb.append(");").append("\n");
-		if(isWithDocumentReadyFunction()) {
-			sb.append(DOCUMENT_READY_FUNCTION_SUFFIX);			
-		}
-		return sb.toString();
-	}
-
-	/**
-	 * Generate the javascript options for template content.
-	 *
-	 * @param variables 
-	 *            the map with the javascript options.
-	 * @param sb the {@link StringBuilder} to add the javascript options. 
+	 * @param sb
+	 *            the {@link StringBuilder} to add the javascript options.
 	 */
 	protected void generateJsOptionsForTemplateContent(final Map<String, Object> variables,
-		StringBuilder sb)
+		final StringBuilder sb)
 	{
 		sb.append("{\n");
 		int count = 1;
@@ -190,9 +199,9 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 			localComponentId = variables.get(COMPONENT_ID);
 			variables.remove(COMPONENT_ID);
 		}
-		for (Map.Entry<String, Object> entry : variables.entrySet())
+		for (final Map.Entry<String, Object> entry : variables.entrySet())
 		{
-			String key = entry.getKey();
+			final String key = entry.getKey();
 			sb.append(key).append(": ${").append(key).append("}");
 			if (count < variables.size())
 			{
@@ -228,7 +237,7 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 		{
 			variables.put(JavascriptGenerator.COMPONENT_ID, componentId);
 		}
-		for (StringTextValue<?> textValue : allSettings)
+		for (final StringTextValue<?> textValue : allSettings)
 		{
 			if (!textValue.isInitialValue())
 			{
@@ -240,16 +249,17 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 							variables.put(textValue.getName(), textValue.getValue());
 							break;
 						}
-						TextTemplateExtensions.setVariableWithSingleQuotationMarks(textValue.getName(),
-							textValue.getValue(), variables);
+						TextTemplateExtensions.setVariableWithSingleQuotationMarks(
+							textValue.getName(), textValue.getValue(), variables);
 						break;
 					case ENUM :
-						TextTemplateExtensions.setVariableWithSingleQuotationMarks(textValue.getName(),
-							((ValueEnum)textValue.getValue()).getValue(), variables);
+						TextTemplateExtensions.setVariableWithSingleQuotationMarks(
+							textValue.getName(), ((ValueEnum)textValue.getValue()).getValue(),
+							variables);
 						break;
 					case STRING_INTEGER :
-						TextTemplateExtensions.setVariableWithSingleQuotationMarks(textValue.getName(),
-							textValue.getValue(), variables);
+						TextTemplateExtensions.setVariableWithSingleQuotationMarks(
+							textValue.getName(), textValue.getValue(), variables);
 						break;
 					default :
 						variables.put(textValue.getName(), textValue.getValue());

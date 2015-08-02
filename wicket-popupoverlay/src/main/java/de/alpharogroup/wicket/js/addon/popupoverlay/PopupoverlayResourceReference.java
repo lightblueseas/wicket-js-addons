@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.popupoverlay;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *

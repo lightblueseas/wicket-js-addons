@@ -61,14 +61,15 @@ public class PnotifyJsGenerator extends JavascriptGenerator<PnotifySettings>
 	 *            The method name.
 	 * @return The generated javascript from the given map and the given method name.
 	 */
+	@Override
 	public String generateJavascriptTemplateContent(final Map<String, Object> variables,
-		String methodName)
+		final String methodName)
 	{
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		if (!getSettings().getStack().isInitialValue())
 		{
-			String customStack = "customStack";
-			String stack = (String)variables.get("stack");
+			final String customStack = "customStack";
+			final String stack = (String)variables.get("stack");
 			sb.append("var " + customStack + " = ");
 			sb.append(stack);
 			sb.append(";\n");

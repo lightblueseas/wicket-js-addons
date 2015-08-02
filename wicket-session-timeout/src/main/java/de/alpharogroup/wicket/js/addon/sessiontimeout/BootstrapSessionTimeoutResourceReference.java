@@ -15,20 +15,21 @@ public class BootstrapSessionTimeoutResourceReference extends JavaScriptResource
 	private static final long serialVersionUID = 1L;
 
 	private static final BootstrapSessionTimeoutResourceReference INSTANCE = new BootstrapSessionTimeoutResourceReference();
-	
+
+	public static BootstrapSessionTimeoutResourceReference get()
+	{
+		return INSTANCE;
+	}
+
 	private BootstrapSessionTimeoutResourceReference()
 	{
 		super(BootstrapSessionTimeoutResourceReference.class, "bootstrap-session-timeout.min.js");
-	}
-	
-	public static BootstrapSessionTimeoutResourceReference get(){
-		return INSTANCE;
 	}
 
 	@Override
 	public List<HeaderItem> getDependencies()
 	{
-		List<HeaderItem> deps = new ArrayList<HeaderItem>();
+		final List<HeaderItem> deps = new ArrayList<HeaderItem>();
 		return deps;
 	}
 

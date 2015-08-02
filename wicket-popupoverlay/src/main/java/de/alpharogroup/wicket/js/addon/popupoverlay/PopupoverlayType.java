@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.popupoverlay;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -43,7 +44,7 @@ public enum PopupoverlayType implements ValueEnum
 	 * @param type
 	 *            the value of the type.
 	 */
-	private PopupoverlayType(String type)
+	private PopupoverlayType(final String type)
 	{
 		this.value = type;
 	}

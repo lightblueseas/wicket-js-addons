@@ -55,7 +55,7 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 	 * @param settings
 	 *            the settings for the toastr plugin.
 	 */
-	public ToastJsGenerator(ToastrSettings settings)
+	public ToastJsGenerator(final ToastrSettings settings)
 	{
 		this(settings, true);
 	}
@@ -66,21 +66,10 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 	 * @param settings
 	 *            the settings for the toastr plugin.
 	 */
-	public ToastJsGenerator(ToastrSettings settings, boolean withDocumentReadyFunction)
+	public ToastJsGenerator(final ToastrSettings settings, final boolean withDocumentReadyFunction)
 	{
 		super(Args.notNull(settings, "settings"));
 		setWithDocumentReadyFunction(withDocumentReadyFunction);
-	}
-
-	/**
-	 * {@inheritDoc}.
-	 */
-	@Override
-	protected Map<String, Object> initializeVariables(final Set<StringTextValue<?>> allSettings)
-	{
-		final Map<String, Object> variables = super.initializeVariables(allSettings);
-		variables.put(COMMAND, getCommand(getSettings()));
-		return variables;
 	}
 
 	/**
@@ -93,16 +82,18 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 	 *            The method name.
 	 * @return The generated javascript from the given map and the given method name.
 	 */
+	@Override
 	public String generateJavascriptTemplateContent(final Map<String, Object> variables,
-		String methodName)
+		final String methodName)
 	{
-		StringBuilder sb = new StringBuilder();
-		if(isWithDocumentReadyFunction()) {
-			sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n").append("\n");			
-		}
-		for (Map.Entry<String, Object> entry : variables.entrySet())
+		final StringBuilder sb = new StringBuilder();
+		if (isWithDocumentReadyFunction())
 		{
-			String key = entry.getKey();
+			sb.append(DOCUMENT_READY_FUNCTION_PREFIX).append("\n").append("\n");
+		}
+		for (final Map.Entry<String, Object> entry : variables.entrySet())
+		{
+			final String key = entry.getKey();
 			if (!COMMAND.equals(key))
 			{
 				sb.append(key).append("=${").append(key).append("};");
@@ -112,8 +103,9 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 		sb.append("\n");
 		sb.append("${" + COMMAND + "};");
 		sb.append("\n");
-		if(isWithDocumentReadyFunction()) {
-			sb.append(DOCUMENT_READY_FUNCTION_SUFFIX);			
+		if (isWithDocumentReadyFunction())
+		{
+			sb.append(DOCUMENT_READY_FUNCTION_SUFFIX);
 		}
 		return sb.toString();
 	}
@@ -125,9 +117,9 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 	 *            the toastrSettings
 	 * @return the command
 	 */
-	public String getCommand(ToastrSettings settings)
+	public String getCommand(final ToastrSettings settings)
 	{
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		sb.append("toastr.");
 		sb.append(settings.getToastrType().getValue().getValue());
 		sb.append("('");
@@ -141,6 +133,17 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 		}
 		sb.append(")");
 		return sb.toString();
+	}
+
+	/**
+	 * {@inheritDoc}.
+	 */
+	@Override
+	protected Map<String, Object> initializeVariables(final Set<StringTextValue<?>> allSettings)
+	{
+		final Map<String, Object> variables = super.initializeVariables(allSettings);
+		variables.put(COMMAND, getCommand(getSettings()));
+		return variables;
 	}
 
 }

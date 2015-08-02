@@ -32,7 +32,7 @@ public enum EffectMethods implements ValueEnum
 	@Getter
 	private final String value;
 
-	EffectMethods(String value)
+	EffectMethods(final String value)
 	{
 		this.value = value;
 	}

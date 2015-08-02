@@ -39,7 +39,7 @@ public enum HideMethod implements ValueEnum
 	 * @param value
 	 *            the value
 	 */
-	private HideMethod(String value)
+	private HideMethod(final String value)
 	{
 		this.value = value;
 	}

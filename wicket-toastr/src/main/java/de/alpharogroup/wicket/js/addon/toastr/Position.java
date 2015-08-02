@@ -53,7 +53,7 @@ public enum Position implements ValueEnum
 	 * @param value
 	 *            the value
 	 */
-	private Position(String value)
+	private Position(final String value)
 	{
 		this.value = value;
 	}

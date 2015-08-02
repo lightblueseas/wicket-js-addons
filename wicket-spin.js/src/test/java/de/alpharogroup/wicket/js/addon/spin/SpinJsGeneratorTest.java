@@ -26,11 +26,11 @@ public class SpinJsGeneratorTest
 	@Test
 	public void testGenerator()
 	{
-		SpinSettings spinSettings = SpinSettings.builder().build();
+		final SpinSettings spinSettings = SpinSettings.builder().build();
 		spinSettings.getClassName().setValue("fancy");
 		spinSettings.getTop().setValue("3");
-		SpinJsGenerator generator = new SpinJsGenerator(spinSettings, "aComponent");
-		String result = generator.generateJs();
+		final SpinJsGenerator generator = new SpinJsGenerator(spinSettings, "aComponent");
+		final String result = generator.generateJs();
 		System.out.println(result);
 	}
 }

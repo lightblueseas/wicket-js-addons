@@ -73,23 +73,6 @@ public class StackSettings
 		StringTextType.STRING).setQuotationMarkType(QuotationMarkType.NONE);
 
 	/**
-	 * Gets all settings in a {@link java.util.Set}.
-	 * 
-	 * @return all settings in a {@link java.util.Set}.
-	 */
-	public Set<StringTextValue<?>> asSet()
-	{
-		Set<StringTextValue<?>> allSettings = new HashSet<>();
-		allSettings.add(getContext());
-		allSettings.add(getDir1());
-		allSettings.add(getDir2());
-		allSettings.add(getPush());
-		allSettings.add(getSpacing1());
-		allSettings.add(getSpacing2());
-		return allSettings;
-	}
-
-	/**
 	 * This settings as a javascript array.
 	 *
 	 * @return This settings as a javascript array.
@@ -97,5 +80,22 @@ public class StackSettings
 	public String asJavascriptArray()
 	{
 		return TextTemplateExtensions.asJavascriptArray(asSet());
+	}
+
+	/**
+	 * Gets all settings in a {@link java.util.Set}.
+	 * 
+	 * @return all settings in a {@link java.util.Set}.
+	 */
+	public Set<StringTextValue<?>> asSet()
+	{
+		final Set<StringTextValue<?>> allSettings = new HashSet<>();
+		allSettings.add(getContext());
+		allSettings.add(getDir1());
+		allSettings.add(getDir2());
+		allSettings.add(getPush());
+		allSettings.add(getSpacing1());
+		allSettings.add(getSpacing2());
+		return allSettings;
 	}
 }

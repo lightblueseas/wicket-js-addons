@@ -34,6 +34,35 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 		.getName());
 
 	/**
+	 * Checks the given value if it is between 0 to 100 quietly. If not a default value from 50 will
+	 * be set.
+	 *
+	 * @param name
+	 *            the name
+	 * @param value
+	 *            the value
+	 * @return the integer
+	 */
+	private static Integer checkQuietly(final String name, final Integer value)
+	{
+		Integer val = 50;
+		try
+		{
+			val = Args.withinRange(0, 100, value, name);
+		}
+		catch (final IllegalArgumentException e)
+		{
+			LOGGER
+				.error(String
+					.format(
+						"Given argument '%s' must have a value within [%s,%s], but was %s. Default value 50% will be set.",
+						name, 0, 100, value));
+		}
+		return val;
+
+	}
+
+	/**
 	 * Instantiates a new {@link PercentNumberFormatTextValue} object.
 	 *
 	 * @param name
@@ -59,35 +88,6 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 	}
 
 	/**
-	 * Checks the given value if it is between 0 to 100 quietly. If not a default value from 50 will
-	 * be set.
-	 *
-	 * @param name
-	 *            the name
-	 * @param value
-	 *            the value
-	 * @return the integer
-	 */
-	private static Integer checkQuietly(final String name, final Integer value)
-	{
-		Integer val = 50;
-		try
-		{
-			val = Args.withinRange(0, 100, value, name);
-		}
-		catch (IllegalArgumentException e)
-		{
-			LOGGER
-				.error(String
-					.format(
-						"Given argument '%s' must have a value within [%s,%s], but was %s. Default value 50% will be set.",
-						name, 0, 100, value));
-		}
-		return val;
-
-	}
-
-	/**
 	 * Check string.
 	 *
 	 * @param value
@@ -101,7 +101,7 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 		{
 			if (value.endsWith("%"))
 			{
-				String sVal = value.substring(0, value.length() - 1);
+				final String sVal = value.substring(0, value.length() - 1);
 				if (StringUtils.isNumeric(sVal))
 				{
 					val = Integer.valueOf(sVal);
@@ -120,19 +120,6 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 	}
 
 	/**
-	 * Sets the value.
-	 *
-	 * @param value
-	 *            the value
-	 * @return the string text value
-	 */
-	public StringTextValue<String> setValue(final Integer value)
-	{
-		String percentFormatted = getPercentFormatted(value);
-		return setValue(percentFormatted);
-	}
-
-	/**
 	 * Gets the percent formatted.
 	 *
 	 * @param value
@@ -141,8 +128,21 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 	 */
 	private String getPercentFormatted(final Integer value)
 	{
-		Integer val = checkQuietly(getName(), value);
+		final Integer val = checkQuietly(getName(), value);
 		return NumberFormat.getPercentInstance().format((double)val / 100);
+	}
+
+	/**
+	 * Sets the value.
+	 *
+	 * @param value
+	 *            the value
+	 * @return the string text value
+	 */
+	public StringTextValue<String> setValue(final Integer value)
+	{
+		final String percentFormatted = getPercentFormatted(value);
+		return setValue(percentFormatted);
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 	@Override
 	public StringTextValue<String> setValue(final String value)
 	{
-		String val = getPercentFormatted(checkString(value));
+		final String val = getPercentFormatted(checkString(value));
 		return super.setValue(val);
 	}
 }

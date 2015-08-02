@@ -167,16 +167,15 @@ public class SessionTimeoutSettings implements Settings
 	 * Custom callback you can use instead of showing the Bootstrap warning dialog. Takes options
 	 * object as the only argument.
 	 * 
-	 * Redirect action will still occur unless you also add the onRedir callback. 
-	 * Note: Type:
+	 * Redirect action will still occur unless you also add the onRedir callback. Note: Type:
 	 * Function or Boolean Default: false
 	 */
 	private final StringTextValue<String> onWarn = new StringTextValue<>("onWarn", "false",
 		StringTextType.STRING);
 
 	/**
-	 * Custom callback you can use instead of redirecting the user to redirUrl. Takes options object as the only argument.
-	 * Note: Type: Function or Boolean Default: false
+	 * Custom callback you can use instead of redirecting the user to redirUrl. Takes options object
+	 * as the only argument. Note: Type: Function or Boolean Default: false
 	 */
 	private final StringTextValue<String> onRedir = new StringTextValue<>("onRedir", "false",
 		StringTextType.STRING);
@@ -184,7 +183,7 @@ public class SessionTimeoutSettings implements Settings
 	@Override
 	public Set<StringTextValue<?>> asSet()
 	{
-		Set<StringTextValue<?>> allSettings = new HashSet<>();
+		final Set<StringTextValue<?>> allSettings = new HashSet<>();
 		allSettings.add(getTitle());
 		allSettings.add(getMessage());
 		allSettings.add(getLogoutButton());

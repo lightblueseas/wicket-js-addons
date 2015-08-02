@@ -15,8 +15,8 @@
  */
 package de.alpharogroup.wicket.js.addon.enums;
 
-import de.alpharogroup.wicket.js.addon.core.ValueEnum;
 import lombok.Getter;
+import de.alpharogroup.wicket.js.addon.core.ValueEnum;
 
 
 /**
@@ -104,7 +104,7 @@ public enum Easing implements ValueEnum
 	 * @param value
 	 *            the value
 	 */
-	private Easing(String value)
+	private Easing(final String value)
 	{
 		this.value = value;
 	}

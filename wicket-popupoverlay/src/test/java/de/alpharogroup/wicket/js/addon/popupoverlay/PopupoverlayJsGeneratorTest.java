@@ -10,7 +10,7 @@ public class PopupoverlayJsGeneratorTest
 	@Test
 	public void testGenerator()
 	{
-		PopupoverlaySettings popupoverlaySettings = PopupoverlaySettings.builder().build();
+		final PopupoverlaySettings popupoverlaySettings = PopupoverlaySettings.builder().build();
 		popupoverlaySettings.getEscape().setValue(false);
 		popupoverlaySettings.getFocusdelay().setValue(400);
 		popupoverlaySettings.getHorizontal().setValue(HorizontalPosition.LEFT);
@@ -21,9 +21,8 @@ public class PopupoverlayJsGeneratorTest
 
 		System.out.println(result);
 		System.out.println("=======================");
-		
-		generator = new PopupoverlayJsGenerator(popupoverlaySettings,
-			"aComponent", false);
+
+		generator = new PopupoverlayJsGenerator(popupoverlaySettings, "aComponent", false);
 		generator.setComponentId("aComponent");
 		result = generator.generateJs();
 

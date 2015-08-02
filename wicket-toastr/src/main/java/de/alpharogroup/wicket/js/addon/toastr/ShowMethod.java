@@ -44,7 +44,7 @@ public enum ShowMethod implements ValueEnum
 	 * @param value
 	 *            the value
 	 */
-	private ShowMethod(String value)
+	private ShowMethod(final String value)
 	{
 		this.value = value;
 	}

@@ -28,13 +28,13 @@ public class SpinResourceReference extends JavaScriptResourceReference
 
 	private static final SpinResourceReference INSTANCE = new SpinResourceReference();
 
-	private SpinResourceReference()
-	{
-		super(SpinResourceReference.class, "spin.min.js");
-	}
-
 	public static SpinResourceReference get()
 	{
 		return INSTANCE;
+	}
+
+	private SpinResourceReference()
+	{
+		super(SpinResourceReference.class, "spin.min.js");
 	}
 }

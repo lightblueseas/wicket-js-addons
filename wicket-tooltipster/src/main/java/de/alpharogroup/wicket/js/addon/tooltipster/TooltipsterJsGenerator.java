@@ -76,7 +76,8 @@ public class TooltipsterJsGenerator extends JavascriptGenerator<TooltipsterSetti
 	 * @param componentId
 	 *            the component id
 	 */
-	public TooltipsterJsGenerator(final TooltipsterSettings settings, final String componentId, boolean withDocumentReadyFunction)
+	public TooltipsterJsGenerator(final TooltipsterSettings settings, final String componentId,
+		final boolean withDocumentReadyFunction)
 	{
 		super(settings);
 		setComponentId(Args.notEmpty(componentId, "componentId"));

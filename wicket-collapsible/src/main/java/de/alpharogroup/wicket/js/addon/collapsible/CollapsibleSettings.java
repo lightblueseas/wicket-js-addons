@@ -33,23 +33,24 @@ public class CollapsibleSettings implements Settings
 	/**
 	 * The speed of the accordion when it goes up. Default: 400
 	 */
-	private final StringTextValue<Integer> accordionUpSpeed = new StringTextValue<>("accordionUpSpeed", 400,
-		StringTextType.INTEGER);
-	
+	private final StringTextValue<Integer> accordionUpSpeed = new StringTextValue<>(
+		"accordionUpSpeed", 400, StringTextType.INTEGER);
+
 	/**
 	 * The speed of the accordion when it goes down. Default: 400
 	 */
-	private final StringTextValue<Integer> accordionDownSpeed = new StringTextValue<>("accordionDownSpeed", 400,
-		StringTextType.INTEGER);
-	
+	private final StringTextValue<Integer> accordionDownSpeed = new StringTextValue<>(
+		"accordionDownSpeed", 400, StringTextType.INTEGER);
+
 	/**
 	 * The speed of the accordion when it collapse. Default: 400
 	 */
-	private final StringTextValue<Integer> collapseSpeed = new StringTextValue<>("collapseSpeed", 400,
-		StringTextType.INTEGER);
-	
+	private final StringTextValue<Integer> collapseSpeed = new StringTextValue<>("collapseSpeed",
+		400, StringTextType.INTEGER);
+
 	/**
-	 * The content open defines how many content is allowed to open. Default pane open, if any. Default: 0
+	 * The content open defines how many content is allowed to open. Default pane open, if any.
+	 * Default: 0
 	 */
 	private final StringTextValue<Integer> contentOpen = new StringTextValue<>("contentOpen", 0,
 		StringTextType.INTEGER);
@@ -57,14 +58,14 @@ public class CollapsibleSettings implements Settings
 	/**
 	 * The css class for dropdown arrow. Default: arrow-r
 	 */
-	private final StringTextValue<String> arrowRclass = new StringTextValue<>("arrowRclass","arrow-r",
-		StringTextType.STRING);
+	private final StringTextValue<String> arrowRclass = new StringTextValue<>("arrowRclass",
+		"arrow-r", StringTextType.STRING);
 
 	/**
 	 * The css class for dropdown arrow. Default: arrow-d
 	 */
-	private final StringTextValue<String> arrowDclass = new StringTextValue<>("arrowRclass","arrow-d",
-		StringTextType.STRING);
+	private final StringTextValue<String> arrowDclass = new StringTextValue<>("arrowRclass",
+		"arrow-d", StringTextType.STRING);
 
 	/**
 	 * If the collapse should be animated. Default: true
@@ -78,14 +79,14 @@ public class CollapsibleSettings implements Settings
 	@Override
 	public Set<StringTextValue<?>> asSet()
 	{
-		Set<StringTextValue<?>> allSettings = new HashSet<>();
+		final Set<StringTextValue<?>> allSettings = new HashSet<>();
 		allSettings.add(getAccordionUpSpeed());
 		allSettings.add(getAccordionDownSpeed());
 		allSettings.add(getCollapseSpeed());
 		allSettings.add(getContentOpen());
 		allSettings.add(getArrowRclass());
 		allSettings.add(getArrowDclass());
-		allSettings.add(getAnimate());		
+		allSettings.add(getAnimate());
 		return allSettings;
 	}
 }

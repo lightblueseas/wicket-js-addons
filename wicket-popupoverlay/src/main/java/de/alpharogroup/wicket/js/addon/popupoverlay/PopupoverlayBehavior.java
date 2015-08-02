@@ -1,4 +1,5 @@
 package de.alpharogroup.wicket.js.addon.popupoverlay;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -58,7 +59,7 @@ public class PopupoverlayBehavior extends Behavior
 	 * @param settings
 	 *            the settings
 	 */
-	public PopupoverlayBehavior(PopupoverlaySettings settings)
+	public PopupoverlayBehavior(final PopupoverlaySettings settings)
 	{
 		this.settings = Args.notNull(settings, "settings");
 	}
@@ -78,15 +79,15 @@ public class PopupoverlayBehavior extends Behavior
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void renderHead(Component component, final IHeaderResponse response)
+	public void renderHead(final Component component, final IHeaderResponse response)
 	{
 		super.renderHead(component, response);
 		response.render(JavaScriptHeaderItem.forReference(Application.get()
 			.getJavaScriptLibrarySettings().getJQueryReference()));
 		response.render(JavaScriptHeaderItem.forReference(PopupoverlayResourceReference.INSTANCE));
-		PopupoverlayJsGenerator generator = new PopupoverlayJsGenerator(this.settings,
+		final PopupoverlayJsGenerator generator = new PopupoverlayJsGenerator(this.settings,
 			this.component.getMarkupId());
-		String javascript = generator.generateJs();
+		final String javascript = generator.generateJs();
 
 		response.render(OnLoadHeaderItem.forScript(javascript));
 	}
