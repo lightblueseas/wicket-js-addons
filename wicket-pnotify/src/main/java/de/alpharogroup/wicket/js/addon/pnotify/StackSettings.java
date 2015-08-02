@@ -24,7 +24,7 @@ import lombok.ToString;
 import de.alpharogroup.wicket.js.addon.core.QuotationMarkType;
 import de.alpharogroup.wicket.js.addon.core.StringTextType;
 import de.alpharogroup.wicket.js.addon.core.StringTextValue;
-import de.alpharogroup.wicket.js.addon.core.TextTemplateUtils;
+import de.alpharogroup.wicket.js.addon.core.TextTemplateExtensions;
 
 /**
  * This class encapsulates various settings for the pnotify stack. See the documentation for the
@@ -96,6 +96,6 @@ public class StackSettings
 	 */
 	public String asJavascriptArray()
 	{
-		return TextTemplateUtils.asJavascriptArray(asSet());
+		return TextTemplateExtensions.asJavascriptArray(asSet());
 	}
 }

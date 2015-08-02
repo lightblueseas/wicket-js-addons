@@ -240,15 +240,15 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 							variables.put(textValue.getName(), textValue.getValue());
 							break;
 						}
-						TextTemplateUtils.setVariableWithSingleQuotationMarks(textValue.getName(),
+						TextTemplateExtensions.setVariableWithSingleQuotationMarks(textValue.getName(),
 							textValue.getValue(), variables);
 						break;
 					case ENUM :
-						TextTemplateUtils.setVariableWithSingleQuotationMarks(textValue.getName(),
+						TextTemplateExtensions.setVariableWithSingleQuotationMarks(textValue.getName(),
 							((ValueEnum)textValue.getValue()).getValue(), variables);
 						break;
 					case STRING_INTEGER :
-						TextTemplateUtils.setVariableWithSingleQuotationMarks(textValue.getName(),
+						TextTemplateExtensions.setVariableWithSingleQuotationMarks(textValue.getName(),
 							textValue.getValue(), variables);
 						break;
 					default :

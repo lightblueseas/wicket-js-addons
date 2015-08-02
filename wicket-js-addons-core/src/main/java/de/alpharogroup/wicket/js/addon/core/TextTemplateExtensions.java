@@ -19,33 +19,10 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * The Class TextTemplateUtils.
+ * The Class TextTemplateExtensions.
  */
-public class TextTemplateUtils
+public class TextTemplateExtensions
 {
-
-	/**
-	 * Sets the variable with singe quotation marks.
-	 *
-	 * @param variablename
-	 *            the variablename
-	 * @param object
-	 *            the object
-	 * @param variables
-	 *            the variables
-	 */
-	public static void setVariableWithSingleQuotationMarks(String variablename, Object object,
-		final Map<String, Object> variables)
-	{
-		if (object != null)
-		{
-			variables.put(variablename, "'" + object + "'");
-		}
-		else
-		{
-			variables.put(variablename, "null");
-		}
-	}
 
 	/**
 	 * Converts the given {@link Set} of {@link StringTextValue} to a javascript array.
@@ -54,12 +31,12 @@ public class TextTemplateUtils
 	 *            the settings
 	 * @return the generated javascript array.
 	 */
-	public static String asJavascriptArray(Set<StringTextValue<?>> settings)
+	public static String asJavascriptArray(final Set<StringTextValue<?>> settings)
 	{
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		sb.append("{\n");
 		int count = 1;
-		for (StringTextValue<?> textValue : settings)
+		for (final StringTextValue<?> textValue : settings)
 		{
 			switch (textValue.getType())
 			{
@@ -89,5 +66,28 @@ public class TextTemplateUtils
 		}
 		sb.append("\n}");
 		return sb.toString();
+	}
+
+	/**
+	 * Sets the variable with singe quotation marks.
+	 *
+	 * @param variablename
+	 *            the variablename
+	 * @param object
+	 *            the object
+	 * @param variables
+	 *            the variables
+	 */
+	public static void setVariableWithSingleQuotationMarks(final String variablename,
+		final Object object, final Map<String, Object> variables)
+	{
+		if (object != null)
+		{
+			variables.put(variablename, "'" + object + "'");
+		}
+		else
+		{
+			variables.put(variablename, "null");
+		}
 	}
 }
