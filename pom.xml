@@ -86,7 +86,7 @@
 		<testng.version>6.9.4</testng.version>
 		<junit.version>4.12</junit.version>
 		<!-- JAULP versions -->
-		<jaulp.core.version>3.12.0</jaulp.core.version>
+		<jaulp.core.version>4.0.0</jaulp.core.version>
 		<jaulp.collections.version>${jaulp.core.version}</jaulp.collections.version>
 		<jaulp.design.patterns.version>${jaulp.core.version}</jaulp.design.patterns.version>
 		<jaulp.email.version>${jaulp.core.version}</jaulp.email.version>
@@ -99,7 +99,7 @@
 		<jaulp.time.version>${jaulp.core.version}</jaulp.time.version>
 		<jaulp.xml.version>${jaulp.core.version}</jaulp.xml.version>
 		<!-- MYSTIC-CRYPT versions -->
-		<mystic-crypt.version>3.11.0</mystic-crypt.version>
+		<mystic-crypt.version>4.0.0</mystic-crypt.version>
 		<crypt-core.version>${mystic-crypt.version}</crypt-core.version>
 		<randomizer.version>${mystic-crypt.version}</randomizer.version>
 		<!-- EXTERNAL LIBRARIES versions -->
