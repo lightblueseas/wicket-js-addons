@@ -47,7 +47,7 @@ public class TooltipsterResourceReference extends JavaScriptResourceReference
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Iterable<? extends HeaderItem> getDependencies()
+	public List<HeaderItem> getDependencies()
 	{
 		final List<HeaderItem> dependencies = new ArrayList<HeaderItem>();
 		dependencies.add(CssHeaderItem.forReference(new CssResourceReference(
