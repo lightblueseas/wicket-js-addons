@@ -53,9 +53,10 @@ public class PopupoverlayJsGenerator extends JavascriptGenerator<PopupoverlaySet
 	 *
 	 * @param settings
 	 *            the settings for the jquery-popup-overlay plugin.
-	 *
 	 * @param componentId
 	 *            the component id
+	 * @param withDocumentReadyFunction
+	 *            the flag if the script will be wrapped with document ready function
 	 */
 	public PopupoverlayJsGenerator(final PopupoverlaySettings settings, final String componentId,
 		final boolean withDocumentReadyFunction)

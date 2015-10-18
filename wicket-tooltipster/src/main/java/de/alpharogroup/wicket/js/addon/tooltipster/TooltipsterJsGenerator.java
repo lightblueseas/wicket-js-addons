@@ -75,6 +75,8 @@ public class TooltipsterJsGenerator extends JavascriptGenerator<TooltipsterSetti
 	 *
 	 * @param componentId
 	 *            the component id
+	 * @param withDocumentReadyFunction
+	 *            the flag if the script will be wrapped with document ready function
 	 */
 	public TooltipsterJsGenerator(final TooltipsterSettings settings, final String componentId,
 		final boolean withDocumentReadyFunction)

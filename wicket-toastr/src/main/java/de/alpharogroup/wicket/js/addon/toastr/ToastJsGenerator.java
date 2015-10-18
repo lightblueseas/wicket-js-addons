@@ -65,6 +65,8 @@ public class ToastJsGenerator extends JavascriptGenerator<ToastrSettings> implem
 	 *
 	 * @param settings
 	 *            the settings for the toastr plugin.
+	 * @param withDocumentReadyFunction
+	 *            the flag if the script will be wrapped with document ready function
 	 */
 	public ToastJsGenerator(final ToastrSettings settings, final boolean withDocumentReadyFunction)
 	{

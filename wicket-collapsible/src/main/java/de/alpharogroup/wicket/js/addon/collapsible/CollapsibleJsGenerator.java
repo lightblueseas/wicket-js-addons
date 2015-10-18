@@ -14,7 +14,7 @@ public class CollapsibleJsGenerator extends JavascriptGenerator<CollapsibleSetti
 
 
 	/**
-	 * Instantiates a new {@link CollapsibleJsGenerator} with the given {@link PopupoverlaySettings}
+	 * Instantiates a new {@link CollapsibleJsGenerator} with the given {@link CollapsibleSettings}
 	 * .
 	 *
 	 * @param settings
@@ -29,7 +29,7 @@ public class CollapsibleJsGenerator extends JavascriptGenerator<CollapsibleSetti
 	}
 
 	/**
-	 * Instantiates a new {@link CollapsibleJsGenerator} with the given {@link PopupoverlaySettings}
+	 * Instantiates a new {@link CollapsibleJsGenerator} with the given {@link CollapsibleSettings}
 	 * .
 	 *
 	 * @param settings
@@ -37,6 +37,8 @@ public class CollapsibleJsGenerator extends JavascriptGenerator<CollapsibleSetti
 	 *
 	 * @param componentId
 	 *            the component id
+	 * @param withDocumentReadyFunction
+	 *            the flag if the script will be wrapped with document ready function
 	 */
 	public CollapsibleJsGenerator(final CollapsibleSettings settings, final String componentId,
 		final boolean withDocumentReadyFunction)
