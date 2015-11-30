@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-wicket-parent</artifactId>
-		<version>7.0.0</version>
+		<version>7.1.0</version>
 		<relativePath></relativePath>
 	</parent>
 
@@ -47,13 +47,12 @@
 
 	<properties>
 		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
-		<wicket.version>7.0.0</wicket.version>
+		<wicket.version>7.1.0</wicket.version>
 	</properties>
 
 	<dependencyManagement>
 
 		<dependencies>
-
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>wicket-js-addons-core</artifactId>
@@ -101,55 +100,17 @@
 				<artifactId>jaulp.wicket.dropdownchoices</artifactId>
 				<version>${wicket.version}</version>
 			</dependency>
-	
+
 		</dependencies>
 
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- LOMBOK DEPENDENCIES -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
 		<!-- WICKET DEPENDENCIES -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-core</artifactId>
 		</dependency>		
-		<!-- LOGGING DEPENDENCIES -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<!-- LOGGING DEPENDENCIES - LOG4J -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-		</dependency>
-		<!-- UNIT DEPENDENCY FOR TESTING -->
-		<!-- TESTNG DEPENDENCY FOR TESTING -->
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- JUNIT DEPENDENCY FOR TESTING -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>de.alpharogroup</groupId>
-			<artifactId>jaulp.file</artifactId>
-		</dependency>
 
 	</dependencies>
 
