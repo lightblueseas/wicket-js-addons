@@ -7,11 +7,12 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-wicket-parent</artifactId>
-		<version>7.1.0</version>
+		<version>7.1.1</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>wicket-js-addons</artifactId>
+		<version>7.1.0</version>
 	<inceptionYear>2015</inceptionYear>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
