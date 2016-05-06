@@ -32,6 +32,10 @@ public class CollapseJsReference extends JQueryPluginResourceReference {
 	private static final long serialVersionUID = 1L;
 	public static final CollapseJsReference INSTANCE = new CollapseJsReference();
 
+	public static CollapseJsReference get() {
+		return INSTANCE;
+	}
+
 	private CollapseJsReference() {
 		super(CollapseJsReference.class, "jquery.collapse_storage.js");
 	}

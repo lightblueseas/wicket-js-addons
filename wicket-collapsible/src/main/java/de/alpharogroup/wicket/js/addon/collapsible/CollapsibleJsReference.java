@@ -18,18 +18,21 @@ package de.alpharogroup.wicket.js.addon.collapsible;
 import org.apache.wicket.resource.JQueryPluginResourceReference;
 
 /**
- * A JavaScript reference that loads the JavaScript resources needed by JQuery UI components.
+ * A JavaScript reference that loads the JavaScript resources needed by JQuery
+ * UI components.
  */
-public class CollapsibleJsReference extends JQueryPluginResourceReference
-{
+public class CollapsibleJsReference extends JQueryPluginResourceReference {
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	public static final CollapsibleJsReference INSTANCE = new CollapsibleJsReference();
 
-	private CollapsibleJsReference()
-	{
+	public static CollapsibleJsReference get() {
+		return INSTANCE;
+	}
+
+	private CollapsibleJsReference() {
 		super(CollapsibleJsReference.class, "jquery.collapsible.min.js");
 	}
 
