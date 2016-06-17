@@ -12,7 +12,6 @@
 	</parent>
 
 	<artifactId>wicket-js-addons</artifactId>
-	<version>6.21.0</version>
 	<inceptionYear>2015</inceptionYear>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
