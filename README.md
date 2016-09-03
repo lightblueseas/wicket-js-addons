@@ -1,7 +1,7 @@
 wicket-js-addons
 ====================
 
-A parent project for javascript libraries and jquery plugins that can be integrated with the framework wicket.
+A parent project for javascript libraries and jquery plugins that can be integrated with the java web framework wicket.
 
 It holds module-projects that are wrappers for the javascript libraries and jquery plugins.
 
@@ -18,7 +18,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-pnotify</artifactId>
-   <version>6.18.0</version>
+   <version>7.4.0</version>
 </dependency>
 ```
 
@@ -28,7 +28,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-popupoverlay</artifactId>
-   <version>6.18.0</version>
+   <version>7.4.0</version>
 </dependency>
 ```
 
@@ -38,7 +38,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-spin.js</artifactId>
-   <version>6.18.0</version>
+   <version>7.4.0</version>
 </dependency>
 ```
 
@@ -48,7 +48,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-toastr</artifactId>
-   <version>6.18.0</version>
+   <version>7.4.0</version>
 </dependency>
 ```
 
@@ -58,6 +58,6 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-tooltipster</artifactId>
-   <version>6.18.0</version>
+   <version>7.4.0</version>
 </dependency>
 ```
