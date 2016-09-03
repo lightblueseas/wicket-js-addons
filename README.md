@@ -62,34 +62,9 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 </dependency>
 ```
 
-# How to use it
+## Documentation
 
-this library generates only js that you can add to a wicket behavior. For instance:
 
-There is a awesome js lib tooltipster.js, You can integrate it and added to a Label you have to create this Label and an instance of the TooltipsterSettings:
-
-`		final Label label = ComponentFactory.newLabel("tooltipTestLabel",
-			Model.of("Im example for tooltipster."));
-		final TooltipsterSettings tooltipsterSettings = TooltipsterSettings.builder().build();`
-
-Then you set all attributes you need for the js lib tooltipster.js:
-
-`		tooltipsterSettings.getAnimation().setValue("grow");
-		tooltipsterSettings.getArrow().setValue(false);
-		tooltipsterSettings.getContent().setValue("Loading foo...");`
-
-If you set all attributes you need you give the tooltipsterSettings instance and the markup id from the label to a JsGenerator in this case the TooltipsterJsGenerator:
-
-`		final TooltipsterJsGenerator tooltipsterJsGenerator = new TooltipsterJsGenerator(
-			tooltipsterSettings, label.getMarkupId());
-		final String js = tooltipsterJsGenerator.generateJs();`
-
-This generates the needed javascript code that you have to add to the label over a Behavior. I have implemented an Behavior(JavascriptAppenderBehavior) that does this:
-
-`		label.add(JavascriptAppenderBehavior.builder().id("tooltip_" + label.getMarkupId())
-			.javascript(js).build());
-		add(label);`
-
-At the end you add the label to the parent component.
-
-The class JavascriptAppenderBehavior is in the lib jaulp.wicket.behaviors project.
+  * [How to use existing addons][How to use existing addons]
+  
+   [How to use existing addons]: https://github.com/lightblueseas/wicket-js-addons/wiki/How-to-use-existing-addons "How to use existing addons"
