@@ -61,3 +61,11 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
    <version>6.18.0</version>
 </dependency>
 ```
+
+## Documentation
+
+
+  * [How to use existing addons][How to use existing addons]
+  
+   [How to use existing addons]: https://github.com/lightblueseas/wicket-js-addons/wiki/How-to-use-existing-addons "How to use existing addons"
+
