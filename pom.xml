@@ -18,6 +18,8 @@
 
 	<description>javascript libraries and jquery plugins that are integrated with the framework wicket</description>
 
+	<url>https://github.com/lightblueseas/wicket-js-addons</url>
+
 	<licenses>
 		<license>
 			<name>MIT License</name>
@@ -26,13 +28,54 @@
 		</license>
 	</licenses>
 
-	<url>https://github.com/lightblueseas/wicket-js-addons</url>
+	<developers>
+
+		<developer>
+			<id>astrapi69</id>
+			<name>Asterios Raptis</name>
+			<email>astrapi69 at users.sf.net</email>
+			<timezone>Berlin</timezone>
+			<roles>
+				<role>Project manager</role>
+				<role>Developer</role>
+			</roles>
+		</developer>
+
+	</developers>
+
+	<organization>
+		<name>Alpha Ro Group UG (haftungsbeschrängt)</name>
+		<url>http://www.alpharogroup.de/</url>
+	</organization>
 
 	<scm>
 		<connection>scm:git:git:@github.com:lightblueseas/wicket-js-addons.git</connection>
 		<developerConnection>scm:git:git@github.com:lightblueseas/wicket-js-addons.git</developerConnection>
 		<url>git:@github.com:lightblueseas/wicket-js-addons.git</url>
 	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<name>Nexus Release Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+
+	<ciManagement>
+		<system>travis-ci</system>
+		<url>https://travis-ci.org/lightblueseas/wicket-js-addons</url>
+	</ciManagement>
+
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/lightblueseas/wicket-js-addons/issues</url>
+	</issueManagement>
 
 	<modules>
 		<module>wicket-popupoverlay</module>
@@ -57,48 +100,6 @@
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>wicket-js-addons-core</artifactId>
 				<version>${wicket-js-addons-core.version}</version>
-			</dependency>
-			<!-- JAULP WICKET DEPENDENCIES -->
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jaulp.wicket.annotated.header.contributors</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jaulp.wicket.base</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jaulp.wicket.components</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jaulp.wicket.behaviors</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jaulp.wicket.data.provider</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jaulp.wicket.dialogs</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jaulp.wicket.dropdownchoices</artifactId>
-				<version>${wicket.version}</version>
 			</dependency>
 
 		</dependencies>
