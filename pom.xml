@@ -12,6 +12,7 @@
 	</parent>
 
 	<artifactId>wicket-js-addons</artifactId>
+	<version>7.3.0</version>
 	<inceptionYear>2015</inceptionYear>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
@@ -90,7 +91,7 @@
 
 	<properties>
 		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
-		<wicket.version>7.4.0</wicket.version>
+		<wicket.version>7.3.0</wicket.version>
 	</properties>
 
 	<dependencyManagement>
