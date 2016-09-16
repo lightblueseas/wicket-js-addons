@@ -66,8 +66,11 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 
 
   * [How to use existing addons][How to use existing addons]
+  * [How to create your own addon from an js lib][How to create your own addon from an js lib]
   
    [How to use existing addons]: https://github.com/lightblueseas/wicket-js-addons/wiki/How-to-use-existing-addons "How to use existing addons"
+
+   [How to create your own addon from an js lib]: https://github.com/lightblueseas/wicket-js-addons/wiki/How-to-create-your-own-addon-from-an-js-lib "How to create your own addon from an js lib"
    
 ## Want to Help and improve it? ###
 
