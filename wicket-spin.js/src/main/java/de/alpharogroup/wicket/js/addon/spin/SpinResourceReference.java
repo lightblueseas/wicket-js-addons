@@ -18,7 +18,7 @@ package de.alpharogroup.wicket.js.addon.spin;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 
 /**
- * The Class SpinResourceReference holds the references(js) for the spin js library.
+ * The class {@link SpinResourceReference} holds the references(js) for the spin js library.
  */
 public class SpinResourceReference extends JavaScriptResourceReference
 {

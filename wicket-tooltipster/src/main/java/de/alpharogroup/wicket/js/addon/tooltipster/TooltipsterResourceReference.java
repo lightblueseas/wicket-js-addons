@@ -24,8 +24,8 @@ import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 
 /**
- * The Class TooltipsterResourceReference holds the references(js and css) for the jquery plugin
- * tooltipster.
+ * The class {@link TooltipsterResourceReference} holds the references(js and css) for the jquery
+ * plugin tooltipster.
  */
 public class TooltipsterResourceReference extends JavaScriptResourceReference
 {
@@ -36,7 +36,7 @@ public class TooltipsterResourceReference extends JavaScriptResourceReference
 	public static final TooltipsterResourceReference INSTANCE = new TooltipsterResourceReference();
 
 	/**
-	 * Instantiates a new TooltipsterResourceReference.
+	 * Instantiates a new {@link TooltipsterResourceReference}.
 	 */
 	private TooltipsterResourceReference()
 	{
@@ -49,9 +49,9 @@ public class TooltipsterResourceReference extends JavaScriptResourceReference
 	@Override
 	public List<HeaderItem> getDependencies()
 	{
-		final List<HeaderItem> dependencies = new ArrayList<HeaderItem>();
-		dependencies.add(CssHeaderItem.forReference(new CssResourceReference(
-			TooltipsterResourceReference.class, "tooltipster.css")));
+		final List<HeaderItem> dependencies = new ArrayList<>();
+		dependencies.add(CssHeaderItem.forReference(
+			new CssResourceReference(TooltipsterResourceReference.class, "tooltipster.css")));
 		return dependencies;
 	}
 
