@@ -22,7 +22,7 @@ import org.apache.wicket.util.lang.Args;
 import de.alpharogroup.wicket.js.addon.core.JavascriptGenerator;
 
 /**
- * The Class SpinJsGenerator generates the javascript with a SpinSettings object and a given
+ * The Class {@link SpinJsGenerator} generates the javascript with a SpinSettings object and a given
  * component id.
  */
 public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
@@ -39,7 +39,7 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 	public static final String SPINNER_JS_VARIABLE = "spinner";
 
 	/**
-	 * Instantiates a new {@link SpinSettings}.
+	 * Instantiates a new {@link SpinJsGenerator}.
 	 */
 	public SpinJsGenerator()
 	{
@@ -47,7 +47,7 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 	}
 
 	/**
-	 * Instantiates a new {@link SpinSettings}.
+	 * Instantiates a new {@link SpinJsGenerator}.
 	 *
 	 * @param settings
 	 *            the settings for the spin library.
@@ -58,7 +58,7 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 	}
 
 	/**
-	 * Instantiates a new {@link SpinSettings}.
+	 * Instantiates a new {@link SpinJsGenerator}.
 	 *
 	 * @param settings
 	 *            the settings for the spin library.
@@ -73,7 +73,7 @@ public class SpinJsGenerator extends JavascriptGenerator<SpinSettings>
 	}
 
 	/**
-	 * Instantiates a new {@link SpinSettings}.
+	 * Instantiates a new {@link SpinJsGenerator}.
 	 *
 	 * @param componentId
 	 *            the component id

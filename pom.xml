@@ -87,6 +87,7 @@
 		<module>wicket-pnotify</module>
 		<module>wicket-session-timeout</module>
 		<module>wicket-collapsible</module>
+		<module>wicket-iscroll</module>
 	</modules>
 
 	<properties>
@@ -112,7 +113,7 @@
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-core</artifactId>
-		</dependency>
+		</dependency>		
 
 	</dependencies>
 

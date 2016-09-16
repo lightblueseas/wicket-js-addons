@@ -1,0 +1,75 @@
+##################
+# Compiled files #
+##################
+*.class
+
+##################
+# intellij files #
+##################
+*.iml
+.idea
+*/.idea
+
+#################
+# eclipse files #
+#################
+/.project
+/.classpath
+/.settings
+
+##################
+# netbeans files #
+##################
+/nb-configuration.xml
+
+#########################
+# maven generated files #
+#########################
+/target
+
+################################
+# Mobile Tools for Java (J2ME) #
+################################
+.mtj.tmp/
+
+#############
+# Zip files #
+#############
+*.tar
+*.zip
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.jar
+*.war
+*.ear
+
+##############
+# Logs files #
+##############
+*.log
+
+#################
+# test-ng files #
+#################
+/test-output
+
+############################
+# Binaries generated files #
+############################
+/bin
+
+################
+# gradle files #
+################
+/build
+/.gradle
+/gradle
+
+##############################################################
+# virtual machine crash logs                                 #
+# see http://www.java.com/en/download/help/error_hotspot.xml #
+##############################################################
+hs_err_pid*
