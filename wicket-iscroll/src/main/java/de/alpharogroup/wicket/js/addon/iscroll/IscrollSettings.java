@@ -37,7 +37,7 @@ public class IscrollSettings implements Settings
 	 * positioned).
 	 *
 	 * This might be useful when scrolling sensitive content such as Flash, iframes and videos, but
-	 * be warned: performance loss is huge. <br/>
+	 * be warned: performance loss is huge. <br>
 	 * Default: true
 	 */
 	private final StringTextValue<Boolean> useTransform = new StringTextValue<>("useTransform",
@@ -50,7 +50,7 @@ public class IscrollSettings implements Settings
 	 * On modern browsers the difference is barely noticeable. On older devices transitions perform
 	 * better.
 	 *
-	 * <br/>
+	 * <br>
 	 * Default: true
 	 */
 	private final StringTextValue<Boolean> useTransition = new StringTextValue<>("useTransition",
@@ -65,7 +65,7 @@ public class IscrollSettings implements Settings
 	 * If unsure leave iScroll decide what's the optimal config. For best performance all the above
 	 * options should be set to true (or better leave them undefined as they are set to true
 	 * automatically). You may try to play with them in case you encounter hiccups and memory leaks.
-	 * <br/>
+	 * <br>
 	 * Default: true
 	 */
 	private final StringTextValue<Boolean> HWCompositing = new StringTextValue<>("HWCompositing",
@@ -75,7 +75,7 @@ public class IscrollSettings implements Settings
 	 * When the scroller meets the boundary it performs a small bounce animation. Disabling bounce
 	 * may help reach smoother results on old or slow devices.
 	 *
-	 * <br/>
+	 * <br>
 	 * Default: true
 	 */
 	private final StringTextValue<Boolean> bounce = new StringTextValue<>("bounce", true,
@@ -87,7 +87,7 @@ public class IscrollSettings implements Settings
 	 * explicitly set this option to true. Please note that it is suggested to use the custom tap
 	 * event instead (see below).
 	 *
-	 * <br/>
+	 * <br>
 	 * Default: false
 	 */
 	private final StringTextValue<Boolean> click = new StringTextValue<>("click",
@@ -102,7 +102,7 @@ public class IscrollSettings implements Settings
 	 * script will run on, you may want to disable all event sets you don't need (mouse, pointer or
 	 * touch events).
 	 *
-	 * <br/>
+	 * <br>
 	 * Default: false
 	 */
 	private final StringTextValue<Boolean> disableMouse = new StringTextValue<>("disableMouse",
@@ -117,7 +117,7 @@ public class IscrollSettings implements Settings
 	 * script will run on, you may want to disable all event sets you don't need (mouse, pointer or
 	 * touch events).
 	 *
-	 * <br/>
+	 * <br>
 	 * Default: false
 	 */
 	private final StringTextValue<Boolean> disablePointer = new StringTextValue<>("disablePointer",
@@ -132,7 +132,7 @@ public class IscrollSettings implements Settings
 	 * script will run on, you may want to disable all event sets you don't need (mouse, pointer or
 	 * touch events).
 	 *
-	 * <br/>
+	 * <br>
 	 * Default: false
 	 */
 	private final StringTextValue<Boolean> disableTouch = new StringTextValue<>("disableTouch",
@@ -141,7 +141,7 @@ public class IscrollSettings implements Settings
 	/**
 	 * Listen to the mouse wheel event.
 	 *
-	 * <br/>
+	 * <br>
 	 * Default: false
 	 */
 	private final StringTextValue<Boolean> mouseWheel = new StringTextValue<>("mouseWheel",
