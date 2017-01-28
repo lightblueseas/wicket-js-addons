@@ -7,12 +7,11 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-wicket-parent</artifactId>
-		<version>7.4.0</version>
+		<version>6.25.0</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>wicket-js-addons</artifactId>
-	<version>7.3.0</version>
 	<inceptionYear>2015</inceptionYear>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
@@ -88,11 +87,12 @@
 		<module>wicket-session-timeout</module>
 		<module>wicket-collapsible</module>
 		<module>wicket-iscroll</module>
+		<module>wicket-knockout</module>
 	</modules>
 
 	<properties>
 		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
-		<wicket.version>7.3.0</wicket.version>
+		<wicket.version>6.25.0</wicket.version>
 	</properties>
 
 	<dependencyManagement>

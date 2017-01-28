@@ -10,6 +10,7 @@ public class IscrollJsGeneratorTest
 	{
 		final IscrollSettings iscrollSettings = IscrollSettings.builder().build();
 		iscrollSettings.getMouseWheel().setValue(Boolean.TRUE);
+		iscrollSettings.getClick().setValue(Boolean.FALSE);
 		final IscrollJsGenerator iscrollJsGenerator = new IscrollJsGenerator(iscrollSettings,
 			"foo-component-id");
 		final String result = iscrollJsGenerator.generateJs();
