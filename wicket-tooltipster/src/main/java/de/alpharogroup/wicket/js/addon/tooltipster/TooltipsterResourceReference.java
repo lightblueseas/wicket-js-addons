@@ -55,4 +55,8 @@ public class TooltipsterResourceReference extends JavaScriptResourceReference
 		return dependencies;
 	}
 
+	public static final TooltipsterResourceReference get() {
+		return INSTANCE;
+	}
+
 }
