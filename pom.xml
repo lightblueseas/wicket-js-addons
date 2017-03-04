@@ -88,10 +88,12 @@
 		<module>wicket-collapsible</module>
 		<module>wicket-iscroll</module>
 		<module>wicket-knockout</module>
+		<module>wicket-ko-bindings</module>
 	</modules>
 
 	<properties>
 		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
+		<wicket-knockout.version>${project.version}</wicket-knockout.version>
 		<wicket.version>6.25.0</wicket.version>
 	</properties>
 
