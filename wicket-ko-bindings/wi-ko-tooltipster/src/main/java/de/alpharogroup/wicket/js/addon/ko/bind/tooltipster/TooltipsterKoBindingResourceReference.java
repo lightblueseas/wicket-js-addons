@@ -24,6 +24,7 @@
  */
 package de.alpharogroup.wicket.js.addon.ko.bind.tooltipster;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.wicket.markup.head.HeaderItem;
@@ -67,8 +68,7 @@ public class TooltipsterKoBindingResourceReference extends JavaScriptResourceRef
 	@Override
 	public Iterable<? extends HeaderItem> getDependencies()
 	{
-		@SuppressWarnings("unchecked")
-		final List<HeaderItem> dependencies = (List<HeaderItem>)super.getDependencies();
+		final List<HeaderItem> dependencies = new ArrayList<>();
 		dependencies.add(JavaScriptHeaderItem.forReference(KnockoutResourceReference.get()));
 		dependencies.add(JavaScriptHeaderItem.forReference(TooltipsterResourceReference.get()));
 		return dependencies;
