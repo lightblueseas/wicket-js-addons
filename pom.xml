@@ -11,8 +11,8 @@
 		<relativePath></relativePath>
 	</parent>
 
-
 	<artifactId>wicket-js-addons</artifactId>
+	<version>7.5.0-SNAPSHOT</version>
 	<inceptionYear>2015</inceptionYear>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
@@ -95,6 +95,7 @@
 	<properties>
 		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
 		<wicket-knockout.version>${project.version}</wicket-knockout.version>
+		<wicket-tooltipster.version>${project.version}</wicket-tooltipster.version>
 		<wicket.version>7.5.0</wicket.version>
 		<commons-lang3.version>3.5</commons-lang3.version>
 	</properties>
@@ -108,14 +109,14 @@
 				<groupId>org.apache.wicket</groupId>
 				<artifactId>wicket-core</artifactId>
 				<version>${wicket.version}</version>
-			</dependency>			
+			</dependency>
 			<!-- EXTERNAL LIBRARIES DEPENDENCIES -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>wicket-js-addons-core</artifactId>

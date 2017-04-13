@@ -11,10 +11,12 @@
 	<artifactId>wi-ko-tooltipster</artifactId>
 
 	<dependencies>
+	
 		<dependency>
 			<groupId>de.alpharogroup</groupId>
 			<artifactId>wicket-tooltipster</artifactId>
 		</dependency>
+		
 	</dependencies>
 
 </project>
