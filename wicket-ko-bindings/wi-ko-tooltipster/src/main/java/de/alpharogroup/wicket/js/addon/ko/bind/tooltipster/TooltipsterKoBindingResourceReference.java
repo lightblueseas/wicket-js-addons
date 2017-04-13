@@ -66,7 +66,7 @@ public class TooltipsterKoBindingResourceReference extends JavaScriptResourceRef
 	}
 
 	@Override
-	public Iterable<? extends HeaderItem> getDependencies()
+	public List<HeaderItem> getDependencies()
 	{
 		final List<HeaderItem> dependencies = new ArrayList<>();
 		dependencies.add(JavaScriptHeaderItem.forReference(KnockoutResourceReference.get()));
