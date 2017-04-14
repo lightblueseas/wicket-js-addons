@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.alpharogroup</groupId>
+		<artifactId>wicket-js-addons</artifactId>
+		<version>7.3.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>wicket-ko-bindings</artifactId>
+	<inceptionYear>2015</inceptionYear>
+	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+
+	<modules>
+		<module>wi-ko-tooltipster</module>
+	</modules>
+
+	<dependencyManagement>
+
+		<dependencies>
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>wicket-knockout</artifactId>
+				<version>${wicket-knockout.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>wicket-tooltipster</artifactId>
+				<version>${wicket-tooltipster.version}</version>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>wicket-knockout</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>
