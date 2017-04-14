@@ -44,6 +44,11 @@ public class TooltipsterResourceReference extends JavaScriptResourceReference
 
 	public static final TooltipsterResourceReference INSTANCE = new TooltipsterResourceReference();
 
+	public static final TooltipsterResourceReference get()
+	{
+		return INSTANCE;
+	}
+
 	/**
 	 * Instantiates a new {@link TooltipsterResourceReference}.
 	 */
@@ -62,10 +67,6 @@ public class TooltipsterResourceReference extends JavaScriptResourceReference
 		dependencies.add(CssHeaderItem.forReference(
 			new CssResourceReference(TooltipsterResourceReference.class, "tooltipster.css")));
 		return dependencies;
-	}
-
-	public static final TooltipsterResourceReference get() {
-		return INSTANCE;
 	}
 
 }

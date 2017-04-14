@@ -44,15 +44,15 @@ package de.alpharogroup.wicket.js.addon.popupoverlay;
 import java.util.HashSet;
 import java.util.Set;
 
+import de.alpharogroup.wicket.js.addon.core.Settings;
+import de.alpharogroup.wicket.js.addon.core.StringTextType;
+import de.alpharogroup.wicket.js.addon.core.StringTextValue;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import de.alpharogroup.wicket.js.addon.core.Settings;
-import de.alpharogroup.wicket.js.addon.core.StringTextType;
-import de.alpharogroup.wicket.js.addon.core.StringTextValue;
 
 /**
  * This class encapsulates various settings for the jquery popupoverlay plugin. See the

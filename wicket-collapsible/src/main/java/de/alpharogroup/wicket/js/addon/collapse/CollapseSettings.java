@@ -38,16 +38,16 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
- * This class encapsulates various settings for the collapse js lib for use with
- * wicket. See the documentation for the collapse js plugin for further
- * information.
+ * This class encapsulates various settings for the collapse js lib for use with wicket. See the
+ * documentation for the collapse js plugin for further information.
  */
 @Getter
 @EqualsAndHashCode
 @ToString
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
-public class CollapseSettings implements Settings {
+public class CollapseSettings implements Settings
+{
 
 	/**
 	 * The serialVersionUID
@@ -57,43 +57,47 @@ public class CollapseSettings implements Settings {
 	/**
 	 * Custom function for showing content Default: function(){ this.show() }
 	 */
-	private final StringTextValue<String> open = new StringTextValue<>("open", StringTextType.STRING);
+	private final StringTextValue<String> open = new StringTextValue<>("open",
+		StringTextType.STRING);
 
 	/**
 	 * Custom function for hiding content (default: function(){ this.hide() })
 	 */
-	private final StringTextValue<String> close = new StringTextValue<>("close", StringTextType.STRING);
+	private final StringTextValue<String> close = new StringTextValue<>("close",
+		StringTextType.STRING);
 
 	/**
-	 * Enable accordion behaviour by setting this option to 'true'. Default:
-	 * false
+	 * Enable accordion behaviour by setting this option to 'true'. Default: false
 	 */
-	private final StringTextValue<Boolean> accordion = new StringTextValue<>("accordion", StringTextType.BOOLEAN);
+	private final StringTextValue<Boolean> accordion = new StringTextValue<>("accordion",
+		StringTextType.BOOLEAN);
 
 	/**
-	 * Enable persistence between page loads by setting this option to 'true'.
-	 * Default: false
+	 * Enable persistence between page loads by setting this option to 'true'. Default: false
 	 */
-	private final StringTextValue<Boolean> persist = new StringTextValue<>("persist", StringTextType.BOOLEAN);
+	private final StringTextValue<Boolean> persist = new StringTextValue<>("persist",
+		StringTextType.BOOLEAN);
 
 	/**
-	 * In order for the plugin to understand the above markup, we can pass a
-	 * 'query' option specifying where to find the header/summary element of a
-	 * section.
+	 * In order for the plugin to understand the above markup, we can pass a 'query' option
+	 * specifying where to find the header/summary element of a section.
 	 */
-	private final StringTextValue<String> query = new StringTextValue<>("query", StringTextType.STRING);
+	private final StringTextValue<String> query = new StringTextValue<>("query",
+		StringTextType.STRING);
 
 	/**
-	 * You can customize what element inside the collapse summary should trigger
-	 * the open/close action.
+	 * You can customize what element inside the collapse summary should trigger the open/close
+	 * action.
 	 */
-	private final StringTextValue<String> clickQuery = new StringTextValue<>("clickQuery", StringTextType.STRING);
+	private final StringTextValue<String> clickQuery = new StringTextValue<>("clickQuery",
+		StringTextType.STRING);
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Set<StringTextValue<?>> asSet() {
+	public Set<StringTextValue<?>> asSet()
+	{
 		final Set<StringTextValue<?>> allSettings = new HashSet<>();
 		allSettings.add(getOpen());
 		allSettings.add(getClose());

@@ -24,6 +24,13 @@
  */
 package de.alpharogroup.wicket.js.addon.popupoverlay;
 
+import org.apache.wicket.Component;
+import org.apache.wicket.MarkupContainer;
+import org.apache.wicket.behavior.AttributeAppender;
+import org.apache.wicket.markup.html.form.Button;
+import org.apache.wicket.markup.html.panel.GenericPanel;
+import org.apache.wicket.model.IModel;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -40,15 +47,7 @@ package de.alpharogroup.wicket.js.addon.popupoverlay;
  * limitations under the License.
  */
 
-
 import lombok.Getter;
-
-import org.apache.wicket.Component;
-import org.apache.wicket.MarkupContainer;
-import org.apache.wicket.behavior.AttributeAppender;
-import org.apache.wicket.markup.html.form.Button;
-import org.apache.wicket.markup.html.panel.GenericPanel;
-import org.apache.wicket.model.IModel;
 
 /**
  * The Class PopupoverlayPanel is production ready and is also an example how to use the
@@ -171,8 +170,8 @@ public abstract class PopupoverlayPanel<T> extends GenericPanel<T>
 		addOrReplace(openButton = newOpenButton("openButton"));
 		// add class attributte with the markup id from the overlay with the
 		// suffix '_open' that indicates that the overlay shell open...
-		openButton.add(new AttributeAppender("class", " " + overlayReference.getMarkupId()
-			+ OPEN_OVERLAY_SUFFIX));
+		openButton.add(new AttributeAppender("class",
+			" " + overlayReference.getMarkupId() + OPEN_OVERLAY_SUFFIX));
 		super.onBeforeRender();
 	}
 

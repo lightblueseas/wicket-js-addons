@@ -26,12 +26,12 @@ package de.alpharogroup.wicket.js.addon.core;
 
 import java.io.Serializable;
 
+import org.apache.wicket.util.lang.Args;
+
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-
-import org.apache.wicket.util.lang.Args;
 
 /**
  * Value for the map of StringTextTemplate.

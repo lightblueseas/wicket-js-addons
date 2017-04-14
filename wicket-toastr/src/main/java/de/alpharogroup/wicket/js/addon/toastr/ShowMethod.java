@@ -24,9 +24,9 @@
  */
 package de.alpharogroup.wicket.js.addon.toastr;
 
-import lombok.Getter;
 import de.alpharogroup.wicket.js.addon.core.ValueEnum;
 import de.alpharogroup.wicket.js.addon.enums.EffectMethods;
+import lombok.Getter;
 
 /**
  * The Enum ShowMethod.

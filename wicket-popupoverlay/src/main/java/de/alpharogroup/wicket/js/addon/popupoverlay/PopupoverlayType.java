@@ -24,6 +24,8 @@
  */
 package de.alpharogroup.wicket.js.addon.popupoverlay;
 
+import de.alpharogroup.wicket.js.addon.core.ValueEnum;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -40,9 +42,7 @@ package de.alpharogroup.wicket.js.addon.popupoverlay;
  * limitations under the License.
  */
 
-
 import lombok.Getter;
-import de.alpharogroup.wicket.js.addon.core.ValueEnum;
 
 /**
  * This enum encapsulates the two possible values from the attribute 'value' in the

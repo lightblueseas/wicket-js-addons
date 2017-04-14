@@ -28,7 +28,8 @@ import org.apache.wicket.util.lang.Args;
 
 import de.alpharogroup.wicket.js.addon.core.JavascriptGenerator;
 
-public class CollapseJsGenerator extends JavascriptGenerator<CollapseSettings> {
+public class CollapseJsGenerator extends JavascriptGenerator<CollapseSettings>
+{
 
 	/**
 	 * The serialVersionUID.
@@ -36,8 +37,7 @@ public class CollapseJsGenerator extends JavascriptGenerator<CollapseSettings> {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Instantiates a new {@link CollapseJsGenerator} with the given
-	 * {@link CollapseSettings} .
+	 * Instantiates a new {@link CollapseJsGenerator} with the given {@link CollapseSettings} .
 	 *
 	 * @param settings
 	 *            the settings for the jquery-collapse plugin.
@@ -45,13 +45,13 @@ public class CollapseJsGenerator extends JavascriptGenerator<CollapseSettings> {
 	 * @param componentId
 	 *            the component id
 	 */
-	public CollapseJsGenerator(final CollapseSettings settings, final String componentId) {
+	public CollapseJsGenerator(final CollapseSettings settings, final String componentId)
+	{
 		this(settings, componentId, false);
 	}
 
 	/**
-	 * Instantiates a new {@link CollapseJsGenerator} with the given
-	 * {@link CollapseSettings} .
+	 * Instantiates a new {@link CollapseJsGenerator} with the given {@link CollapseSettings} .
 	 *
 	 * @param settings
 	 *            the settings for the jquery-popup-overlay plugin.
@@ -59,11 +59,11 @@ public class CollapseJsGenerator extends JavascriptGenerator<CollapseSettings> {
 	 * @param componentId
 	 *            the component id
 	 * @param withDocumentReadyFunction
-	 *            the flag if the script will be wrapped with document ready
-	 *            function
+	 *            the flag if the script will be wrapped with document ready function
 	 */
 	public CollapseJsGenerator(final CollapseSettings settings, final String componentId,
-			final boolean withDocumentReadyFunction) {
+		final boolean withDocumentReadyFunction)
+	{
 		super(settings);
 		setComponentId(Args.notEmpty(componentId, "componentId"));
 		setWithComponentId(true);
@@ -77,7 +77,8 @@ public class CollapseJsGenerator extends JavascriptGenerator<CollapseSettings> {
 	 * @param componentId
 	 *            the component id
 	 */
-	public CollapseJsGenerator(final String componentId) {
+	public CollapseJsGenerator(final String componentId)
+	{
 		this(CollapseSettings.builder().build(), componentId);
 	}
 

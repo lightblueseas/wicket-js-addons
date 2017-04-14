@@ -27,13 +27,13 @@ package de.alpharogroup.wicket.js.addon.pnotify;
 import java.util.HashSet;
 import java.util.Set;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
 import de.alpharogroup.wicket.js.addon.core.QuotationMarkType;
 import de.alpharogroup.wicket.js.addon.core.StringTextType;
 import de.alpharogroup.wicket.js.addon.core.StringTextValue;
 import de.alpharogroup.wicket.js.addon.core.TextTemplateExtensions;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 /**
  * This class encapsulates various settings for the pnotify stack. See the documentation for the

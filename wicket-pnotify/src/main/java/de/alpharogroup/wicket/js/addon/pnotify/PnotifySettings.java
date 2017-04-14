@@ -27,16 +27,16 @@ package de.alpharogroup.wicket.js.addon.pnotify;
 import java.util.HashSet;
 import java.util.Set;
 
+import de.alpharogroup.wicket.js.addon.core.QuotationMarkType;
+import de.alpharogroup.wicket.js.addon.core.Settings;
+import de.alpharogroup.wicket.js.addon.core.StringTextType;
+import de.alpharogroup.wicket.js.addon.core.StringTextValue;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import de.alpharogroup.wicket.js.addon.core.QuotationMarkType;
-import de.alpharogroup.wicket.js.addon.core.Settings;
-import de.alpharogroup.wicket.js.addon.core.StringTextType;
-import de.alpharogroup.wicket.js.addon.core.StringTextValue;
 
 /**
  * This class encapsulates various settings for the pnotify js lib for use with wicket. See the
@@ -147,8 +147,8 @@ public class PnotifySettings implements Settings
 	 * Determines how the notification will animate in and out. Default: 'fade' Posible values:
 	 * "slow", "def" or "normal", "fast" or number of milliseconds.
 	 */
-	private final StringTextValue<String> animation_speed = new StringTextValue<>(
-		"animation_speed", "slow", StringTextType.STRING);
+	private final StringTextValue<String> animation_speed = new StringTextValue<>("animation_speed",
+		"slow", StringTextType.STRING);
 
 	/**
 	 * Specify a specific duration of position animation. Default: 500
@@ -204,7 +204,7 @@ public class PnotifySettings implements Settings
 	 */
 	private final StringTextValue<String> stack = new StringTextValue<>("stack",
 		new StackSettings().asJavascriptArray(), StringTextType.STRING)
-		.setQuotationMarkType(QuotationMarkType.NONE);
+			.setQuotationMarkType(QuotationMarkType.NONE);
 
 	/**
 	 * {@inheritDoc}

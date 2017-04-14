@@ -48,8 +48,8 @@ public class TooltipsterJsGenerator extends JavascriptGenerator<TooltipsterSetti
 	private static final long serialVersionUID = 1L;
 
 	/** The LOGGER. */
-	protected static final Logger LOGGER = LoggerFactory.getLogger(TooltipsterJsGenerator.class
-		.getName());
+	protected static final Logger LOGGER = LoggerFactory
+		.getLogger(TooltipsterJsGenerator.class.getName());
 
 	/**
 	 * Instantiates a new {@link TooltipsterJsGenerator}.

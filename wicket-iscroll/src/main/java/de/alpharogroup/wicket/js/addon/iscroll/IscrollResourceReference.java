@@ -35,14 +35,6 @@ public class IscrollResourceReference extends JavaScriptResourceReference
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Instantiates a new {@link IscrollResourceReference}.
-	 */
-	private IscrollResourceReference()
-	{
-		super(IscrollResourceReference.class, "iscroll.js");
-	}
-
 	/** The Constant INSTANCE. */
 	private static final IscrollResourceReference INSTANCE = new IscrollResourceReference();
 
@@ -54,6 +46,14 @@ public class IscrollResourceReference extends JavaScriptResourceReference
 	public static IscrollResourceReference get()
 	{
 		return INSTANCE;
+	}
+
+	/**
+	 * Instantiates a new {@link IscrollResourceReference}.
+	 */
+	private IscrollResourceReference()
+	{
+		super(IscrollResourceReference.class, "iscroll.js");
 	}
 
 }

@@ -39,8 +39,8 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 	/** The serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 	/** The Constant logger. */
-	protected static final Logger LOGGER = Logger.getLogger(PercentNumberFormatTextValue.class
-		.getName());
+	protected static final Logger LOGGER = Logger
+		.getLogger(PercentNumberFormatTextValue.class.getName());
 
 	/**
 	 * Checks the given value if it is between 0 to 100 quietly. If not a default value from 50 will
@@ -61,11 +61,9 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 		}
 		catch (final IllegalArgumentException e)
 		{
-			LOGGER
-				.error(String
-					.format(
-						"Given argument '%s' must have a value within [%s,%s], but was %s. Default value 50% will be set.",
-						name, 0, 100, value));
+			LOGGER.error(String.format(
+				"Given argument '%s' must have a value within [%s,%s], but was %s. Default value 50% will be set.",
+				name, 0, 100, value));
 		}
 		return val;
 
@@ -92,8 +90,9 @@ public class PercentNumberFormatTextValue extends StringTextValue<String>
 	 */
 	public PercentNumberFormatTextValue(final String name, final Integer value)
 	{
-		super(name, NumberFormat.getPercentInstance().format(
-			(double)checkQuietly(name, value) / 100), StringTextType.STRING_INTEGER);
+		super(name,
+			NumberFormat.getPercentInstance().format((double)checkQuietly(name, value) / 100),
+			StringTextType.STRING_INTEGER);
 	}
 
 	/**
