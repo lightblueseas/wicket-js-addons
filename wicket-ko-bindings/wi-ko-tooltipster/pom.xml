@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>wicket-ko-bindings</artifactId>
-		<version>7.3.1-SNAPSHOT</version>
+		<version>7.3.1</version>
 	</parent>
 
 	<artifactId>wi-ko-tooltipster</artifactId>
