@@ -9,8 +9,37 @@ The wrappers are loosely coupled and can be easily integrated into an existing A
 
 The wicket-js-addons-core module project holds the API that all sub-modules uses to build the wrappers. If you want to write your own wrapper you can add this project as dependency.
 
+## License
 
-## Maven projects
+The source code comes under the liberal MIT License, making wicket-js-addons great for all types of wicket applications.
+
+# Build status
+[![Build Status](https://travis-ci.org/lightblueseas/wicket-js-addons.svg?branch=master)](https://travis-ci.org/lightblueseas/wicket-js-addons)
+
+## Maven Central
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/wicket-js-addons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/wicket-js-addons)
+
+## Maven dependency
+
+Maven dependency is now on sonatype.
+Check out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~de.alpharogroup~wicket-js-addons~~~) for latest snapshots and releases.
+
+Add the following maven dependencies to your project `pom.xml` if you want to import the core functionality:
+
+You can first define the version properties:
+
+	<properties>
+			...
+		<!-- WICKET-JS-ADDONS version -->
+		<wicket-js-addons.version>7.3.1</wicket-js-addons.version>
+		<wicket-pnotify.version>${wicket-js-addons.version}</wicket-pnotify.version>
+		<wicket-popupoverlay.version>${wicket-js-addons.version}</wicket-popupoverlay.version>
+		<wicket-spin.js.version>${wicket-js-addons.version}</wicket-spin.js.version>
+		<wicket-toastr.version>${wicket-js-addons.version}</wicket-toastr.version>
+		<wicket-tooltipster.version>${wicket-js-addons.version}</wicket-tooltipster.version>
+			...
+	</properties>
 
 Add the following maven dependency to your project `pom.xml` if you want to import the wicket-pnotify project:
 
@@ -18,7 +47,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-pnotify</artifactId>
-   <version>7.4.0</version>
+   <version>${wicket-pnotify.version}</version>
 </dependency>
 ```
 
@@ -28,7 +57,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-popupoverlay</artifactId>
-   <version>7.4.0</version>
+   <version>${wicket-popupoverlay.version}</version>
 </dependency>
 ```
 
@@ -38,7 +67,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-spin.js</artifactId>
-   <version>7.4.0</version>
+   <version>${wicket-spin.js.version}</version>
 </dependency>
 ```
 
@@ -48,7 +77,7 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-toastr</artifactId>
-   <version>7.4.0</version>
+   <version>${wicket-toastr.version}</version>
 </dependency>
 ```
 
@@ -58,12 +87,11 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 <dependency>
    <groupId>de.alpharogroup</groupId>
    <artifactId>wicket-tooltipster</artifactId>
-   <version>7.4.0</version>
+   <version>${wicket-tooltipster.version}</version>
 </dependency>
 ```
 
 ## Documentation
-
 
   * [How to use existing addons][How to use existing addons]
   * [How to create your own addon from an js lib][How to create your own addon from an js lib]
@@ -84,6 +112,10 @@ To share your changes, [submit a pull request](https://github.com/lightblueseas/
 
 Do not hesitate to contact the wicket-js-addons developers with your questions, concerns, comments, bug reports, or feature requests.
 - Feature requests, questions and bug reports can be reported at the [issues page](https://github.com/lightblueseas/wicket-js-addons/issues).
+
+## Note
+
+No animals were harmed in the making of this library.
 
 # Donate
 
