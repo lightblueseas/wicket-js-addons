@@ -24,8 +24,8 @@
  */
 package de.alpharogroup.wicket.js.addon.toastr;
 
-import lombok.Getter;
 import de.alpharogroup.wicket.js.addon.core.ValueEnum;
+import lombok.Getter;
 
 /**
  * The Enum Position.

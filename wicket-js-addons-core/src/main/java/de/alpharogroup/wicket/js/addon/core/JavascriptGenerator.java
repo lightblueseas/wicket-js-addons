@@ -30,12 +30,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import org.apache.wicket.util.lang.Args;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Base class for javascript generation for the
@@ -62,8 +62,8 @@ public class JavascriptGenerator<S extends Settings> implements Serializable
 	public static final String DOCUMENT_READY_FUNCTION_SUFFIX = "})";
 
 	/** The LOGGER. */
-	protected static final Logger LOGGER = LoggerFactory.getLogger(JavascriptGenerator.class
-		.getName());
+	protected static final Logger LOGGER = LoggerFactory
+		.getLogger(JavascriptGenerator.class.getName());
 
 	/** The component id. */
 	private String componentId;

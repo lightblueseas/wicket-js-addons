@@ -33,19 +33,21 @@ import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.resource.JQueryPluginResourceReference;
 
 /**
- * A JavaScript reference that loads the JavaScript resources needed by JQuery
- * UI components.
+ * A JavaScript reference that loads the JavaScript resources needed by JQuery UI components.
  */
-public class CollapseJsReference extends JQueryPluginResourceReference {
+public class CollapseJsReference extends JQueryPluginResourceReference
+{
 
 	private static final long serialVersionUID = 1L;
 	public static final CollapseJsReference INSTANCE = new CollapseJsReference();
 
-	public static CollapseJsReference get() {
+	public static CollapseJsReference get()
+	{
 		return INSTANCE;
 	}
 
-	private CollapseJsReference() {
+	private CollapseJsReference()
+	{
 		super(CollapseJsReference.class, "jquery.collapse_storage.js");
 	}
 
@@ -53,10 +55,11 @@ public class CollapseJsReference extends JQueryPluginResourceReference {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public List<HeaderItem> getDependencies() {
+	public List<HeaderItem> getDependencies()
+	{
 		final List<HeaderItem> dependencies = new ArrayList<HeaderItem>();
-		dependencies.add(JavaScriptHeaderItem
-				.forReference(new JavaScriptResourceReference(CollapseJsReference.class, "jquery.collapse.js")));
+		dependencies.add(JavaScriptHeaderItem.forReference(
+			new JavaScriptResourceReference(CollapseJsReference.class, "jquery.collapse.js")));
 		return dependencies;
 	}
 

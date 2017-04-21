@@ -26,10 +26,12 @@ package de.alpharogroup.wicket.js.addon.collapse;
 
 import org.junit.Test;
 
-public class CollapseJsGeneratorTest {
+public class CollapseJsGeneratorTest
+{
 
 	@Test
-	public void testCollapsibleJsGenerator() {
+	public void testCollapsibleJsGenerator()
+	{
 		final CollapseSettings settings = CollapseSettings.builder().build();
 		settings.getAccordion().setValue(Boolean.TRUE);
 

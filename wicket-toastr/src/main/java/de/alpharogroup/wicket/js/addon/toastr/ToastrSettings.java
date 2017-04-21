@@ -27,16 +27,16 @@ package de.alpharogroup.wicket.js.addon.toastr;
 import java.util.HashSet;
 import java.util.Set;
 
+import de.alpharogroup.wicket.js.addon.core.Settings;
+import de.alpharogroup.wicket.js.addon.core.StringTextType;
+import de.alpharogroup.wicket.js.addon.core.StringTextValue;
+import de.alpharogroup.wicket.js.addon.enums.Easing;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import de.alpharogroup.wicket.js.addon.core.Settings;
-import de.alpharogroup.wicket.js.addon.core.StringTextType;
-import de.alpharogroup.wicket.js.addon.core.StringTextValue;
-import de.alpharogroup.wicket.js.addon.enums.Easing;
 
 /**
  * This class encapsulates various settings for the toastr jquery plugin. See the documentation for
@@ -117,8 +117,8 @@ public class ToastrSettings implements Settings
 	/**
 	 * The timeOut. Default: 5000
 	 */
-	private final StringTextValue<Integer> timeOut = new StringTextValue<>(
-		"toastr.options.timeOut", 5000, StringTextType.INTEGER);
+	private final StringTextValue<Integer> timeOut = new StringTextValue<>("toastr.options.timeOut",
+		5000, StringTextType.INTEGER);
 
 	/**
 	 * The extended timeOut. Default: 1000

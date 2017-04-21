@@ -59,8 +59,8 @@ public class ToastrResourceReference extends JavaScriptResourceReference
 	public List<HeaderItem> getDependencies()
 	{
 		final List<HeaderItem> dependencies = new ArrayList<HeaderItem>();
-		dependencies.add(CssHeaderItem.forReference(new CssResourceReference(
-			ToastrResourceReference.class, "toastr.min.css")));
+		dependencies.add(CssHeaderItem.forReference(
+			new CssResourceReference(ToastrResourceReference.class, "toastr.min.css")));
 		return dependencies;
 	}
 

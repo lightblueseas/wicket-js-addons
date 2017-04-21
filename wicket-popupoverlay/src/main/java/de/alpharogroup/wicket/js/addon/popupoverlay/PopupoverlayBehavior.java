@@ -24,6 +24,14 @@
  */
 package de.alpharogroup.wicket.js.addon.popupoverlay;
 
+import org.apache.wicket.Application;
+import org.apache.wicket.Component;
+import org.apache.wicket.behavior.Behavior;
+import org.apache.wicket.markup.head.IHeaderResponse;
+import org.apache.wicket.markup.head.JavaScriptHeaderItem;
+import org.apache.wicket.markup.head.OnLoadHeaderItem;
+import org.apache.wicket.util.lang.Args;
+
 /**
  * Copyright (C) 2010 Asterios Raptis
  *
@@ -40,16 +48,7 @@ package de.alpharogroup.wicket.js.addon.popupoverlay;
  * limitations under the License.
  */
 
-
 import lombok.Setter;
-
-import org.apache.wicket.Application;
-import org.apache.wicket.Component;
-import org.apache.wicket.behavior.Behavior;
-import org.apache.wicket.markup.head.IHeaderResponse;
-import org.apache.wicket.markup.head.JavaScriptHeaderItem;
-import org.apache.wicket.markup.head.OnLoadHeaderItem;
-import org.apache.wicket.util.lang.Args;
 
 /**
  * The Class PopupoverlayBehavior.
@@ -106,8 +105,8 @@ public class PopupoverlayBehavior extends Behavior
 	public void renderHead(final Component component, final IHeaderResponse response)
 	{
 		super.renderHead(component, response);
-		response.render(JavaScriptHeaderItem.forReference(Application.get()
-			.getJavaScriptLibrarySettings().getJQueryReference()));
+		response.render(JavaScriptHeaderItem
+			.forReference(Application.get().getJavaScriptLibrarySettings().getJQueryReference()));
 		response.render(JavaScriptHeaderItem.forReference(PopupoverlayResourceReference.INSTANCE));
 		final PopupoverlayJsGenerator generator = new PopupoverlayJsGenerator(this.settings,
 			this.component.getMarkupId());

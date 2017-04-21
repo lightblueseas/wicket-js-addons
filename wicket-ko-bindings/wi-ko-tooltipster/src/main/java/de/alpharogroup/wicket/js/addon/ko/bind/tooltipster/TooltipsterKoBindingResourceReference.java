@@ -48,14 +48,6 @@ public class TooltipsterKoBindingResourceReference extends JavaScriptResourceRef
 	private static final TooltipsterKoBindingResourceReference INSTANCE = new TooltipsterKoBindingResourceReference();
 
 	/**
-	 * Instantiates a new {@link TooltipsterKoBindingResourceReference}.
-	 */
-	private TooltipsterKoBindingResourceReference()
-	{
-		super(TooltipsterKoBindingResourceReference.class, "tooltipster-binding.js");
-	}
-
-	/**
 	 * Gets singleton instance.
 	 *
 	 * @return the singleton {@link TooltipsterKoBindingResourceReference} object.
@@ -63,6 +55,14 @@ public class TooltipsterKoBindingResourceReference extends JavaScriptResourceRef
 	public static final TooltipsterKoBindingResourceReference get()
 	{
 		return INSTANCE;
+	}
+
+	/**
+	 * Instantiates a new {@link TooltipsterKoBindingResourceReference}.
+	 */
+	private TooltipsterKoBindingResourceReference()
+	{
+		super(TooltipsterKoBindingResourceReference.class, "tooltipster-binding.js");
 	}
 
 	@Override

@@ -24,17 +24,17 @@
  */
 package de.alpharogroup.wicket.js.addon.toastr;
 
-import lombok.Getter;
 import de.alpharogroup.wicket.js.addon.core.ValueEnum;
 import de.alpharogroup.wicket.js.addon.enums.EffectMethods;
+import lombok.Getter;
 
 /**
  * The Enum HideMethod.
  */
 public enum HideMethod implements ValueEnum
 {
-	HIDE("hide"), FADE_OUT(EffectMethods.FADE_OUT.getValue()), SLIDE_UP(EffectMethods.SLIDE_UP
-		.getValue());
+	HIDE("hide"), FADE_OUT(EffectMethods.FADE_OUT.getValue()), SLIDE_UP(
+		EffectMethods.SLIDE_UP.getValue());
 
 	/**
 	 * The value of the easing.

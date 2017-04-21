@@ -27,15 +27,15 @@ package de.alpharogroup.wicket.js.addon.sessiontimeout;
 import java.util.HashSet;
 import java.util.Set;
 
+import de.alpharogroup.wicket.js.addon.core.Settings;
+import de.alpharogroup.wicket.js.addon.core.StringTextType;
+import de.alpharogroup.wicket.js.addon.core.StringTextValue;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import de.alpharogroup.wicket.js.addon.core.Settings;
-import de.alpharogroup.wicket.js.addon.core.StringTextType;
-import de.alpharogroup.wicket.js.addon.core.StringTextValue;
 
 /**
  * This class encapsulates various settings for the SessionTimeout plugin. See the documentation for
@@ -79,8 +79,8 @@ public class SessionTimeoutSettings implements Settings
 	 * This is the text shown to user via Bootstrap warning dialog after warning period in the Kepp
 	 * Alive button. Default: 'Stay Connected'
 	 */
-	private final StringTextValue<String> keepAliveButton = new StringTextValue<>(
-		"keepAliveButton", "Stay Connected", StringTextType.STRING);
+	private final StringTextValue<String> keepAliveButton = new StringTextValue<>("keepAliveButton",
+		"Stay Connected", StringTextType.STRING);
 
 	/**
 	 * URL to ping via AJAX POST to keep the session alive. This resource should do something
@@ -121,15 +121,15 @@ public class SessionTimeoutSettings implements Settings
 	/**
 	 * URL to take browser to if no action is take after the warning. Default: '/timed-out'
 	 */
-	private final StringTextValue<String> redirUrl = new StringTextValue<>("redirUrl",
-		"/timed-out", StringTextType.STRING);
+	private final StringTextValue<String> redirUrl = new StringTextValue<>("redirUrl", "/timed-out",
+		StringTextType.STRING);
 
 	/**
 	 * URL to take browser to if user clicks "Logout" on the Bootstrap warning dialog. Default:
 	 * '/log-out'
 	 */
-	private final StringTextValue<String> logoutUrl = new StringTextValue<>("logoutUrl",
-		"/log-out", StringTextType.STRING);
+	private final StringTextValue<String> logoutUrl = new StringTextValue<>("logoutUrl", "/log-out",
+		StringTextType.STRING);
 
 	/**
 	 * Time in milliseconds after page is opened until warning dialog is opened. Default: 900000 (15
@@ -142,14 +142,14 @@ public class SessionTimeoutSettings implements Settings
 	 * Time in milliseconds after page is opened until browser is redirected to redirUrl. Default:
 	 * 1200000 (20 minutes)
 	 */
-	private final StringTextValue<Integer> redirAfter = new StringTextValue<>("redirAfter",
-		1200000, StringTextType.INTEGER);
+	private final StringTextValue<Integer> redirAfter = new StringTextValue<>("redirAfter", 1200000,
+		StringTextType.INTEGER);
 
 	/**
 	 * If true, this will launch the Bootstrap warning dialog / redirect (or callback functions) in
 	 * a set amounts of time regardless of user activity. This in turn makes the plugin act much
-	 * like the <a
-	 * href="https://github.com/maxfierke/jquery-sessionTimeout-bootstrap">jquery-sessionTimeout
+	 * like the
+	 * <a href="https://github.com/maxfierke/jquery-sessionTimeout-bootstrap">jquery-sessionTimeout
 	 * -bootstrap</a> by maxfierke plugin. Default: false
 	 */
 	private final StringTextValue<Boolean> ignoreUserActivity = new StringTextValue<>(
