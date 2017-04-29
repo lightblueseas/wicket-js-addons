@@ -7,7 +7,7 @@
 	<parent>
 		<artifactId>wicket-js-addons</artifactId>
 		<groupId>de.alpharogroup</groupId>
-		<version>7.3.1</version>
+		<version>6.25.2</version>
 	</parent>
 
 	<artifactId>wicket-popupoverlay</artifactId>

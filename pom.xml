@@ -12,7 +12,7 @@
 	</parent>
 
 	<artifactId>wicket-js-addons</artifactId>
-	<version>7.3.1</version>
+	<version>6.25.2</version>
 	<inceptionYear>2015</inceptionYear>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
@@ -93,10 +93,10 @@
 	</modules>
 
 	<properties>
-		<wicket-js-addons-core.version>${project.version}</wicket-js-addons-core.version>
-		<wicket-knockout.version>${project.version}</wicket-knockout.version>
-		<wicket-tooltipster.version>${project.version}</wicket-tooltipster.version>
-		<wicket.version>7.3.0</wicket.version>
+		<wicket.version>6.25.0</wicket.version>
+		<wicket-js-addons-core.version>6.25.2</wicket-js-addons-core.version>
+		<wicket-knockout.version>6.25.2</wicket-knockout.version>
+		<wicket-tooltipster.version>6.25.2</wicket-tooltipster.version>
 		<commons-lang3.version>3.5</commons-lang3.version>
 	</properties>
 
