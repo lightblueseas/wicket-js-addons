@@ -161,8 +161,6 @@ public abstract class PopupoverlayPanel<T> extends GenericPanel<T>
 	@Override
 	public void onBeforeRender()
 	{
-
-
 		addOrReplace(overlayReference = newOverlayReference("overlayReference", getModel()));
 		overlayReference.add(newPopupoverlayBehavior());
 		overlayReference.setOutputMarkupId(true);
