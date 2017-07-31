@@ -106,7 +106,7 @@ The source code for wicket-js-addons are on GitHub. Please feel free to fork and
 
 Create your own fork of [lightblueseas/wicket-js-addons/fork](https://github.com/lightblueseas/wicket-js-addons/fork)
 
-To share your changes, [submit a pull request](https://github.com/lightblueseas/wicket-js-addons/pull/new/master).
+To share your changes, [submit a pull request](https://github.com/lightblueseas/wicket-js-addons/pull/new/develop).
 
 ## Contacting the Developers
 
