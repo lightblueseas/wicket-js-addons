@@ -93,11 +93,11 @@
 	</modules>
 
 	<properties>
-		<wicket-js-addons-core.version>7.6.0</wicket-js-addons-core.version>
-		<wicket-knockout.version>7.6.0</wicket-knockout.version>
-		<wicket-tooltipster.version>7.6.0</wicket-tooltipster.version>
-		<wicket.version>7.6.0</wicket.version>
-		<commons-lang3.version>3.5</commons-lang3.version>
+		<wicket-js-addons-core.version>7.7.0-SNAPSHOT</wicket-js-addons-core.version>
+		<wicket-knockout.version>7.7.0-SNAPSHOT</wicket-knockout.version>
+		<wicket-tooltipster.version>7.7.0-SNAPSHOT</wicket-tooltipster.version>
+		<wicket.version>7.7.0</wicket.version>
+		<commons-lang3.version>3.7</commons-lang3.version>
 	</properties>
 
 	<dependencyManagement>
