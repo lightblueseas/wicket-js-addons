@@ -7,12 +7,12 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-java-parent</artifactId>
-		<version>2.24.0</version>
+		<version>4.1</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>wicket-js-addons</artifactId>
-	<version>7.6.0</version>
+	<version>7.7.0</version>
 	<inceptionYear>2015</inceptionYear>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
@@ -93,11 +93,11 @@
 	</modules>
 
 	<properties>
-		<wicket-js-addons-core.version>7.6.0</wicket-js-addons-core.version>
-		<wicket-knockout.version>7.6.0</wicket-knockout.version>
-		<wicket-tooltipster.version>7.6.0</wicket-tooltipster.version>
-		<wicket.version>7.6.0</wicket.version>
-		<commons-lang3.version>3.5</commons-lang3.version>
+		<wicket-js-addons-core.version>7.7.0</wicket-js-addons-core.version>
+		<wicket-knockout.version>7.7.0</wicket-knockout.version>
+		<wicket-tooltipster.version>7.7.0</wicket-tooltipster.version>
+		<wicket.version>7.7.0</wicket.version>
+		<commons-lang3.version>3.7</commons-lang3.version>
 	</properties>
 
 	<dependencyManagement>

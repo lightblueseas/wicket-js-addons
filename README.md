@@ -32,7 +32,7 @@ You can first define the version properties:
 	<properties>
 			...
 		<!-- WICKET-JS-ADDONS version -->
-		<wicket-js-addons.version>7.3.1</wicket-js-addons.version>
+		<wicket-js-addons.version>7.7.0</wicket-js-addons.version>
 		<wicket-pnotify.version>${wicket-js-addons.version}</wicket-pnotify.version>
 		<wicket-popupoverlay.version>${wicket-js-addons.version}</wicket-popupoverlay.version>
 		<wicket-spin.js.version>${wicket-js-addons.version}</wicket-spin.js.version>
@@ -106,7 +106,7 @@ The source code for wicket-js-addons are on GitHub. Please feel free to fork and
 
 Create your own fork of [lightblueseas/wicket-js-addons/fork](https://github.com/lightblueseas/wicket-js-addons/fork)
 
-To share your changes, [submit a pull request](https://github.com/lightblueseas/wicket-js-addons/pull/new/master).
+To share your changes, [submit a pull request](https://github.com/lightblueseas/wicket-js-addons/pull/new/develop).
 
 ## Contacting the Developers
 
