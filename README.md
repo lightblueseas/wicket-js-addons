@@ -32,7 +32,7 @@ You can first define the version properties:
 	<properties>
 			...
 		<!-- WICKET-JS-ADDONS version -->
-		<wicket-js-addons.version>7.7.0</wicket-js-addons.version>
+		<wicket-js-addons.version>7.8.0</wicket-js-addons.version>
 		<wicket-pnotify.version>${wicket-js-addons.version}</wicket-pnotify.version>
 		<wicket-popupoverlay.version>${wicket-js-addons.version}</wicket-popupoverlay.version>
 		<wicket-spin.js.version>${wicket-js-addons.version}</wicket-spin.js.version>
