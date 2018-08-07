@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>wicket-js-addons</artifactId>
-		<version>7.7.0</version>
+		<version>7.8.0</version>
 	</parent>
 	
 	<artifactId>wicket-collapsible</artifactId>
