@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>wicket-js-addons</artifactId>
-		<version>7.8.0-SNAPSHOT</version>
+		<version>7.8.0</version>
 	</parent>
 
 	<artifactId>wicket-tooltipster</artifactId>
